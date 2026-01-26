@@ -23,20 +23,41 @@ Independent security researcher specializing in DeFi protocol vulnerabilities an
 
 ---
 
-## Engineering
+## The Engineering: Ferox-Pro
 
-I build custom security tooling to support my research:
+> *From prototype to production-grade security platform*
 
-- **Rust-based fuzzing frameworks** for DeFi state analysis
-- **Automated audit pipelines** with CI/CD integration
-- **Reconnaissance engines** for attack surface mapping
+I architect and maintain a proprietary security framework that competes with enterprise tools:
 
-> The repositories below are public samples demonstrating engineering capability.
-> Production security tooling remains private for OPSEC.
+<table>
+<tr>
+<td align="center"><b>505,456</b><br><sub>Lines of Rust</sub></td>
+<td align="center"><b>36</b><br><sub>Custom Crates</sub></td>
+<td align="center"><b>63</b><br><sub>Scanner Modules</sub></td>
+<td align="center"><b>2,185</b><br><sub>Async Patterns</sub></td>
+</tr>
+</table>
+
+**Architecture:**
+```
+Core Engine     → ferox-core, ferox-engine, ferox-pipeline
+Security        → ferox-exploit, ferox-fuzzer, ferox-proxy, ferox-c2
+Reconnaissance  → ferox-recon, ferox-crawler, ferox-scan
+Blockchain      → ferox-evm, ferox-solana
+Integration     → HackerOne, Bugcrowd, Intigriti APIs
+```
+
+**Why Rust?** Memory safety for security tools. Zero-cost abstractions for performance. Fearless concurrency for scale.
+
+*One engineer. Enterprise-grade output. The code speaks for itself.*
+
+<sub>🔒 Private repository — [UI Demo](https://huggingface.co/spaces/abdulwahed-sweden/theme) available</sub>
 
 ---
 
 ## Public Engineering Samples
+
+> The repositories below demonstrate the engineering patterns used in my private security tooling.
 
 | Repository | Description |
 |------------|-------------|
@@ -52,10 +73,11 @@ I build custom security tooling to support my research:
 ## Technical Stack
 
 ```
-Security:     Foundry | Slither | Echidna | Custom Fuzzers
-Smart Contracts: Solidity | Vyper | EVM Internals
-Systems:      Rust | Python | Async/Tokio
-Infrastructure: Docker | CI/CD | Cloud Platforms
+Security Research    Foundry | Slither | Echidna | Custom Fuzzers
+Smart Contracts      Solidity | Vyper | EVM Internals
+Systems Engineering  Rust | Python | Async/Tokio
+Blockchain           EVM | Solana | DeFi Protocols
+Infrastructure       Docker | CI/CD | Cloud Platforms
 ```
 
 ---
