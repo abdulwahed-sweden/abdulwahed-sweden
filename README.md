@@ -6,6 +6,32 @@ Stockholm, Sweden
 
 ---
 
+## 🎯 Featured Project: HuntKits
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/abdulwahed-sweden/Huntkits/main/assets/banner.svg" alt="HuntKits" width="700"/>
+</p>
+
+<p align="center">
+  <a href="https://github.com/abdulwahed-sweden/Huntkits/releases"><img src="https://img.shields.io/github/v/release/abdulwahed-sweden/Huntkits?style=flat-square&color=blue" alt="Release"/></a>
+  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/python-3.10+-blue?style=flat-square&logo=python&logoColor=white" alt="Python"/></a>
+  <a href="https://github.com/abdulwahed-sweden/Huntkits/stargazers"><img src="https://img.shields.io/github/stars/abdulwahed-sweden/Huntkits?style=flat-square" alt="Stars"/></a>
+</p>
+
+**[HuntKits](https://github.com/abdulwahed-sweden/Huntkits)** — Comprehensive security scanning toolkit for bug bounty hunters and penetration testers.
+
+- 🔍 **9 Vulnerability Scanners** — SQLi, XSS, SSRF, LFI, SSTI, XXE, CRLF, CMDi, Open Redirect
+- 🔗 **Correlation Engine** — Attack path analysis with 9 vulnerability chain rules  
+- 📊 **Professional Reports** — HTML reports with risk scoring
+- 🐳 **Docker Ready** — Production-ready containerization
+
+```bash
+pip install huntkits
+huntkits auto scan https://target.com --mode full
+```
+
+---
+
 ## Research Focus
 
 Independent security researcher specializing in DeFi protocol vulnerabilities and smart contract security.
@@ -61,6 +87,7 @@ Integration     → HackerOne, Bugcrowd, Intigriti APIs
 
 | Repository | Description |
 |------------|-------------|
+| [**HuntKits**](https://github.com/abdulwahed-sweden/Huntkits) | 🎯 Security scanning toolkit with 9 vuln scanners & correlation engine |
 | [chthonic](https://github.com/abdulwahed-sweden/chthonic) | Modular penetration testing framework in Rust |
 | [rust-scraper-pro](https://github.com/abdulwahed-sweden/rust-scraper-pro) | Production-grade web scraping with AI integration |
 | [deepseek-rust](https://github.com/abdulwahed-sweden/deepseek-rust) | Async Rust client library for LLM APIs |
