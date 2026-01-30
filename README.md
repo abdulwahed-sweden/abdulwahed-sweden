@@ -9,7 +9,7 @@ Stockholm, Sweden
 ## 🎯 Featured Project: HuntKits
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/abdulwahed-sweden/Huntkits/main/assets/banner.svg" alt="HuntKits" width="700"/>
+  <img src="https://gist.githubusercontent.com/abdulwahed-sweden/a6259270fa0c192a5d0c2115e6721edf/raw/banner.svg" alt="HuntKits" width="700"/>
 </p>
 
 <p align="center">
