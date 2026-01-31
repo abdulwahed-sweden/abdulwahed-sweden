@@ -32,6 +32,28 @@ huntkits auto scan https://target.com --mode full
 
 ---
 
+## 🤍 Support the Project
+
+If HuntKits has been useful in your security research or bug bounty work, you may consider supporting its ongoing development.
+
+<p align="center">
+  <a href="https://www.paypal.com/paypalme/abdulwahed10901">
+    <img src="https://img.shields.io/badge/PayPal-Donate-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="Donate via PayPal"/>
+  </a>
+</p>
+
+**Ethereum (ETH / ERC-20)**
+`0x3011BfD673a9D09f9761203A7fFCca757Af22587`
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Ethereum-Support-627EEA?style=for-the-badge&logo=ethereum&logoColor=white" alt="Support via Ethereum"/>
+</p>
+
+Support helps maintain, improve, and extend this open-source security tooling.
+Every contribution is genuinely appreciated.
+
+---
+
 ## Research Focus
 
 Independent security researcher specializing in DeFi protocol vulnerabilities and smart contract security.
