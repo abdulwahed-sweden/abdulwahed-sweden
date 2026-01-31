@@ -94,6 +94,7 @@ Integration     → HackerOne, Bugcrowd, Intigriti APIs
 | [weather_api_rust](https://github.com/abdulwahed-sweden/weather_api_rust) | High-performance API with MCP protocol integration |
 | [rust-cli-toolkit](https://github.com/abdulwahed-sweden/rust-cli-toolkit) | Modular command-line toolkit |
 | [fluid-contracts-public](https://github.com/abdulwahed-sweden/fluid-contracts-public) | DeFi protocol contract analysis |
+| [**fluid-dex-v2-security-review**](https://github.com/abdulwahed-sweden/fluid-dex-v2-security-review) | Security architecture review of Fluid DEX V2 protocol |
 
 ---
 
