@@ -1,143 +1,110 @@
+<div align="center">
+
 # Abdulwahed Mansour
 
-**Security Researcher** | **Smart Contract Auditor** | **Rust Security Tooling**
+**Smart Contract Security Researcher · Rust Systems Engineer · DeFi Protocol Specialist**
 
-Stockholm, Sweden
+[![Location](https://img.shields.io/badge/Stockholm-Sweden-0F62FE?style=flat-square)](https://github.com/abdulwahed-sweden)
+[![Email](https://img.shields.io/badge/Email-abdulwahed.sweden%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:abdulwahed.sweden@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-abdulwahed--mansour-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/abdulwahed-mansour)
+
+</div>
 
 ---
 
-## 🎯 Featured Project: HuntKits
+Independent security researcher specializing in DeFi protocol vulnerabilities and smart contract auditing. I combine rigorous economic modeling with systems-level Rust engineering — building property-based fuzzers, formal invariant proofs, and exploit simulators to find what static analyzers miss.
 
-<p align="center">
-  <img src="https://gist.githubusercontent.com/abdulwahed-sweden/a6259270fa0c192a5d0c2115e6721edf/raw/banner.svg" alt="HuntKits" width="700"/>
-</p>
+Currently focused on: **liquidation mechanism exploits**, **oracle manipulation**, **Asymmetric Deficit Socialization (ADS)** in lending protocols, and **Shariah-compliant DeFi infrastructure**.
 
-<p align="center">
-  <a href="https://github.com/abdulwahed-sweden/Huntkits/releases"><img src="https://img.shields.io/github/v/release/abdulwahed-sweden/Huntkits?style=flat-square&color=blue" alt="Release"/></a>
-  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/python-3.10+-blue?style=flat-square&logo=python&logoColor=white" alt="Python"/></a>
-  <a href="https://github.com/abdulwahed-sweden/Huntkits/stargazers"><img src="https://img.shields.io/github/stars/abdulwahed-sweden/Huntkits?style=flat-square" alt="Stars"/></a>
-</p>
+---
 
-**[HuntKits](https://github.com/abdulwahed-sweden/Huntkits)** — Comprehensive security scanning toolkit for bug bounty hunters and penetration testers.
+## Security Research
 
-- 🔍 **9 Vulnerability Scanners** — SQLi, XSS, SSRF, LFI, SSTI, XXE, CRLF, CMDi, Open Redirect
-- 🔗 **Correlation Engine** — Attack path analysis with 9 vulnerability chain rules  
-- 📊 **Professional Reports** — HTML reports with risk scoring
-- 🐳 **Docker Ready** — Production-ready containerization
+### Fluid DEX V2 — Independent Audit (Sherlock Contest)
 
-```bash
-pip install huntkits
-huntkits auto scan https://target.com --mode full
+Formal security review of Instadapp's Fluid DEX V2 protocol. Built a Python-native exploit engine with 1:1 replicas of core Solidity components (BigMath, Smart Debt, fee math, liquidation), automated economic fuzzing via Hypothesis, and 198 property-based tests.
+
+**Confirmed Findings:**
+
+| ID | Title | Severity |
+|----|-------|----------|
+| #6 | Liquidation dust debt creates uncloseable positions | Low–Medium |
+| #1 | Smart Debt round-trip precision loss (1–2 wei leak) | Informational |
+| #7 | BigMath accounting mismatch | Informational (team-acknowledged DC#13) |
+
+→ [`fluid-dex-v2-security-review`](https://github.com/abdulwahed-sweden/fluid-dex-v2-security-review)
+
+### sunna-protocol — Shariah-Compliant DeFi Infrastructure
+
+ERC-4626-based vault with Mudaraba profit-loss sharing, JHD effort tracking, and constitutional solvency invariants enforced at the contract level. Designed for halal financial infrastructure on EVM.
+
+→ [`sunna-protocol`](https://github.com/abdulwahed-sweden/sunna-protocol) · Solidity · Foundry · OpenZeppelin 5.0
+
+**Research domains:**
+- Asymmetric Deficit Socialization (ADS) — per-transition invariant enforcement, trace-aware verification
+- Liquidation mechanism exploits and dust debt analysis
+- Oracle manipulation & price feed attack vectors
+- Economic attack modeling with 50-decimal precision arithmetic
+
+---
+
+## Engineering
+
+**Rust**
+```
+Bitcoin-Sentinel    →  Bitcoin chain monitoring, alerting, and analysis system
+polaris-chronos     →  High-latitude prayer time engine — Polar Night / Midnight Sun adaptive projection
+chthonic            →  Modular async penetration testing framework with session management
+axum-rust           →  Production web app — dark/light themes, RTL/LTR internationalization
+deepseek-rust       →  Async Rust client library for DeepSeek AI API (type-safe, builder pattern)
+rust-scraper-pro    →  Production-grade web scraping with AI integration and processing pipelines
+weather_api_rust    →  High-performance REST API with MCP protocol integration for Claude Code
+```
+
+**Smart Contracts**
+```
+sunna-protocol      →  Shariah-compliant DeFi vault (Foundry, Solidity 0.8.20)
+amend-protocol      →  ERC-4626 vault + Engine architecture (archived → private monorepo)
+```
+
+**Web & AI**
+```
+BookFlow            →  FastAPI + Vue.js appointment booking system with JWT auth
+deepseek-ai-chatbot →  Next.js + Vercel AI SDK multi-provider chatbot with chat persistence
+docker-mcp-postgres →  MCP server with Docker + PostgreSQL for AI agent integration
 ```
 
 ---
 
-## 🤍 Support the Project
+## GitHub Stats
 
-If HuntKits has been useful in your security research or bug bounty work, you may consider supporting its ongoing development.
+<div align="center">
 
-<p align="center">
-  <a href="https://www.paypal.com/paypalme/abdulwahed10901">
-    <img src="https://img.shields.io/badge/PayPal-Donate-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="Donate via PayPal"/>
-  </a>
-</p>
+[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=abdulwahed-sweden&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&rank_icon=github)](https://github.com/abdulwahed-sweden)
+&nbsp;
+[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=abdulwahed-sweden&layout=compact&theme=github_dark&hide_border=true&langs_count=8)](https://github.com/abdulwahed-sweden)
 
-**Ethereum (ETH / ERC-20)**
-`0x3011BfD673a9D09f9761203A7fFCca757Af22587`
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Ethereum-Support-627EEA?style=for-the-badge&logo=ethereum&logoColor=white" alt="Support via Ethereum"/>
-</p>
-
-Support helps maintain, improve, and extend this open-source security tooling.
-Every contribution is genuinely appreciated.
+</div>
 
 ---
 
-## Research Focus
-
-Independent security researcher specializing in DeFi protocol vulnerabilities and smart contract security.
-
-**Primary Areas:**
-- Oracle manipulation & price feed attacks
-- Asymmetric Deficit Socialization (ADS) in lending protocols
-- Liquidation mechanism exploits
-- Economic attack modeling
-
-**Track Record:**
-- Critical findings accepted by Top-10 TVL DeFi protocols
-- Active contributor to Immunefi bug bounty programs
-- Responsible disclosure practitioner
-
----
-
-## The Engineering: Ferox-Pro
-
-> *From prototype to production-grade security platform*
-
-I architect and maintain a proprietary security framework that competes with enterprise tools:
-
-<table>
-<tr>
-<td align="center"><b>505,456</b><br><sub>Lines of Rust</sub></td>
-<td align="center"><b>36</b><br><sub>Custom Crates</sub></td>
-<td align="center"><b>63</b><br><sub>Scanner Modules</sub></td>
-<td align="center"><b>2,185</b><br><sub>Async Patterns</sub></td>
-</tr>
-</table>
-
-**Architecture:**
-```
-Core Engine     → ferox-core, ferox-engine, ferox-pipeline
-Security        → ferox-exploit, ferox-fuzzer, ferox-proxy, ferox-c2
-Reconnaissance  → ferox-recon, ferox-crawler, ferox-scan
-Blockchain      → ferox-evm, ferox-solana
-Integration     → HackerOne, Bugcrowd, Intigriti APIs
-```
-
-**Why Rust?** Memory safety for security tools. Zero-cost abstractions for performance. Fearless concurrency for scale.
-
-*One engineer. Enterprise-grade output. The code speaks for itself.*
-
-<sub>🔒 Private repository — [UI Demo](https://huggingface.co/spaces/abdulwahed-sweden/theme) available</sub>
-
----
-
-## Public Engineering Samples
-
-> The repositories below demonstrate the engineering patterns used in my private security tooling.
-
-| Repository | Description |
-|------------|-------------|
-| [**HuntKits**](https://github.com/abdulwahed-sweden/Huntkits) | 🎯 Security scanning toolkit with 9 vuln scanners & correlation engine |
-| [chthonic](https://github.com/abdulwahed-sweden/chthonic) | Modular penetration testing framework in Rust |
-| [rust-scraper-pro](https://github.com/abdulwahed-sweden/rust-scraper-pro) | Production-grade web scraping with AI integration |
-| [deepseek-rust](https://github.com/abdulwahed-sweden/deepseek-rust) | Async Rust client library for LLM APIs |
-| [weather_api_rust](https://github.com/abdulwahed-sweden/weather_api_rust) | High-performance API with MCP protocol integration |
-| [rust-cli-toolkit](https://github.com/abdulwahed-sweden/rust-cli-toolkit) | Modular command-line toolkit |
-| [fluid-contracts-public](https://github.com/abdulwahed-sweden/fluid-contracts-public) | DeFi protocol contract analysis |
-| [**fluid-dex-v2-security-review**](https://github.com/abdulwahed-sweden/fluid-dex-v2-security-review) | Security architecture review of Fluid DEX V2 protocol |
-
----
-
-## Technical Stack
+## Stack
 
 ```
-Security Research    Foundry | Slither | Echidna | Custom Fuzzers
-Smart Contracts      Solidity | Vyper | EVM Internals
-Systems Engineering  Rust | Python | Async/Tokio
-Blockchain           EVM | Solana | DeFi Protocols
-Infrastructure       Docker | CI/CD | Cloud Platforms
+Security Research    Foundry · Slither · Echidna · Hypothesis · Custom Fuzzers
+Smart Contracts      Solidity · EVM Internals · OpenZeppelin 5.0
+Systems Engineering  Rust · Tokio · Axum · async-std
+Scripting & Research Python 3.12 · FastAPI · Django · Decimal(prec=50)
+Blockchain           EVM · Solana · DeFi Protocol Architecture
+Infrastructure       Docker · PostgreSQL · Redis · GitHub Actions
 ```
 
 ---
 
 ## Contact
 
-- **Security Disclosures:** Responsible disclosure via official program channels
-- **Consulting Inquiries:** abdulwahed.sweden@gmail.com
+- **Security disclosures:** Responsible disclosure via official program channels
+- **Consulting & audits:** abdulwahed.sweden@gmail.com
 - **LinkedIn:** [abdulwahed-mansour](https://linkedin.com/in/abdulwahed-mansour)
 
----
-
-<sub>*Open to: Protocol audits, security consulting, full-time security research roles*</sub>
+*Open to: Protocol audits · Security consulting · DeFi security research roles*
