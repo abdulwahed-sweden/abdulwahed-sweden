@@ -2,7 +2,7 @@
 
 # Abdulwahed Mansour
 
-**Smart Contract Security Researcher · Rust Systems Engineer · DeFi Protocol Specialist**
+**Smart Contract Security Researcher · Rust Systems Engineer · Protocol Architect**
 
 [![Location](https://img.shields.io/badge/Stockholm-Sweden-0F62FE?style=flat-square)](https://github.com/abdulwahed-sweden)
 [![Email](https://img.shields.io/badge/Email-abdulwahed.sweden%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:abdulwahed.sweden@gmail.com)
@@ -12,9 +12,82 @@
 
 ---
 
-Independent security researcher specializing in DeFi protocol vulnerabilities and smart contract auditing. I combine rigorous economic modeling with systems-level Rust engineering — building property-based fuzzers, formal invariant proofs, and exploit simulators to find what static analyzers miss.
+Independent security researcher and protocol engineer specializing in DeFi vulnerabilities, ERC-4337 account abstraction, and smart contract auditing. I combine rigorous economic modeling with systems-level Rust engineering — building property-based fuzzers, formal invariant proofs, and exploit simulators to find what static analyzers miss.
 
-Currently focused on: **liquidation mechanism exploits**, **oracle manipulation**, **Asymmetric Deficit Socialization (ADS)** in lending protocols, and **Shariah-compliant DeFi infrastructure**.
+Currently focused on: **intent-based account abstraction**, **liquidation mechanism exploits**, **ZK credential systems**, **Asymmetric Deficit Socialization (ADS)** in lending protocols, and **Shariah-compliant DeFi infrastructure**.
+
+---
+
+## Flagship Projects
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### [`huntkey`](https://github.com/abdulwahed-sweden/huntkey)
+**Intent-Based Sovereign Smart Account Protocol**
+
+ERC-4337 Account Abstraction with a 4-layer defense-in-depth execution model. The master key never touches the network — HKDF-derived ephemeral session keys handle constrained operations through 15 on-chain validation checks.
+
+`Rust` `Solidity` `ERC-4337` `EIP-712` `ZK Claims` `126 tests`
+
+</td>
+<td width="50%" valign="top">
+
+### [`sunna-protocol`](https://github.com/abdulwahed-sweden/sunna-protocol)
+**Shariah-Compliant DeFi Infrastructure**
+
+ERC-4626 vault with Mudaraba profit-loss sharing, JHD effort tracking, and constitutional solvency invariants enforced at the contract level. Designed for halal financial infrastructure on EVM.
+
+`Solidity` `Foundry` `OpenZeppelin 5.0` `ERC-4626`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### [`fluid-dex-v2-security-review`](https://github.com/abdulwahed-sweden/fluid-dex-v2-security-review)
+**Independent Security Audit (Sherlock Contest)**
+
+Formal review of Instadapp's Fluid DEX V2. Built a Python-native exploit engine with 1:1 Solidity replicas, automated economic fuzzing via Hypothesis, and 198 property-based tests. 3 confirmed findings.
+
+`Python` `Hypothesis` `DeFi` `Exploit Modeling`
+
+</td>
+<td width="50%" valign="top">
+
+### [`amend`](https://github.com/abdulwahed-sweden/amend)
+**Multi-Chain DeFi Vault Protocol**
+
+DeFi vault protocol with formal invariant verification and transparent operations. Multi-chain architecture with per-transition invariant enforcement and trace-aware verification.
+
+`Solidity` `Foundry` `Invariant Testing` `Multi-Chain`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### [`Bitcoin-Sentinel`](https://github.com/abdulwahed-sweden/Bitcoin-Sentinel)
+**Bitcoin Chain Monitoring & Analysis**
+
+Real-time Bitcoin chain monitoring system with alerting, anomaly detection, and transaction analysis. Built in Rust for high-throughput processing.
+
+`Rust` `Bitcoin` `Monitoring` `Async`
+
+</td>
+<td width="50%" valign="top">
+
+### [`polaris-chronos`](https://github.com/abdulwahed-sweden/polaris-chronos)
+**Universal Prayer Time Engine**
+
+High-latitude prayer time calculations using adaptive projection and angular solar dynamics. Solves Polar Night and Midnight Sun edge cases that break conventional algorithms.
+
+`Rust` `Astronomy` `High-Performance` `Adaptive Projection`
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -28,51 +101,16 @@ Formal security review of Instadapp's Fluid DEX V2 protocol. Built a Python-nati
 
 | ID | Title | Severity |
 |----|-------|----------|
-| #6 | Liquidation dust debt creates uncloseable positions | Low–Medium |
-| #1 | Smart Debt round-trip precision loss (1–2 wei leak) | Informational |
+| #6 | Liquidation dust debt creates uncloseable positions | Low-Medium |
+| #1 | Smart Debt round-trip precision loss (1-2 wei leak) | Informational |
 | #7 | BigMath accounting mismatch | Informational (team-acknowledged DC#13) |
-
-→ [`fluid-dex-v2-security-review`](https://github.com/abdulwahed-sweden/fluid-dex-v2-security-review)
-
-### sunna-protocol — Shariah-Compliant DeFi Infrastructure
-
-ERC-4626-based vault with Mudaraba profit-loss sharing, JHD effort tracking, and constitutional solvency invariants enforced at the contract level. Designed for halal financial infrastructure on EVM.
-
-→ [`sunna-protocol`](https://github.com/abdulwahed-sweden/sunna-protocol) · Solidity · Foundry · OpenZeppelin 5.0
 
 **Research domains:**
 - Asymmetric Deficit Socialization (ADS) — per-transition invariant enforcement, trace-aware verification
 - Liquidation mechanism exploits and dust debt analysis
 - Oracle manipulation & price feed attack vectors
 - Economic attack modeling with 50-decimal precision arithmetic
-
----
-
-## Engineering
-
-**Rust**
-```
-Bitcoin-Sentinel    →  Bitcoin chain monitoring, alerting, and analysis system
-polaris-chronos     →  High-latitude prayer time engine — Polar Night / Midnight Sun adaptive projection
-chthonic            →  Modular async penetration testing framework with session management
-axum-rust           →  Production web app — dark/light themes, RTL/LTR internationalization
-deepseek-rust       →  Async Rust client library for DeepSeek AI API (type-safe, builder pattern)
-rust-scraper-pro    →  Production-grade web scraping with AI integration and processing pipelines
-weather_api_rust    →  High-performance REST API with MCP protocol integration for Claude Code
-```
-
-**Smart Contracts**
-```
-sunna-protocol      →  Shariah-compliant DeFi vault (Foundry, Solidity 0.8.20)
-amend-protocol      →  ERC-4626 vault + Engine architecture (archived → private monorepo)
-```
-
-**Web & AI**
-```
-BookFlow            →  FastAPI + Vue.js appointment booking system with JWT auth
-deepseek-ai-chatbot →  Next.js + Vercel AI SDK multi-provider chatbot with chat persistence
-docker-mcp-postgres →  MCP server with Docker + PostgreSQL for AI agent integration
-```
+- Intent-based signing and ERC-4337 validation security
 
 ---
 
@@ -92,10 +130,11 @@ docker-mcp-postgres →  MCP server with Docker + PostgreSQL for AI agent integr
 
 ```
 Security Research    Foundry · Slither · Echidna · Hypothesis · Custom Fuzzers
-Smart Contracts      Solidity · EVM Internals · OpenZeppelin 5.0
+Smart Contracts      Solidity · EVM Internals · OpenZeppelin 5.0 · ERC-4337
+Protocol Design      EIP-712 · Account Abstraction · ZK Claims · HKDF-SHA256
 Systems Engineering  Rust · Tokio · Axum · async-std
 Scripting & Research Python 3.12 · FastAPI · Django · Decimal(prec=50)
-Blockchain           EVM · Solana · DeFi Protocol Architecture
+Blockchain           EVM · Solana · Bitcoin · DeFi Protocol Architecture
 Infrastructure       Docker · PostgreSQL · Redis · GitHub Actions
 ```
 
@@ -107,4 +146,4 @@ Infrastructure       Docker · PostgreSQL · Redis · GitHub Actions
 - **Consulting & audits:** abdulwahed.sweden@gmail.com
 - **LinkedIn:** [abdulwahed-mansour](https://linkedin.com/in/abdulwahed-mansour)
 
-*Open to: Protocol audits · Security consulting · DeFi security research roles*
+*Open to: Protocol audits · Security consulting · DeFi security research roles · Account abstraction engineering*
