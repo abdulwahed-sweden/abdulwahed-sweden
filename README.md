@@ -54,6 +54,8 @@ I also bring a security-focused mindset from active vulnerability research on pl
 
 ### Selected Projects
 
+🆕 **[Hyra](https://github.com/abdulwahed-sweden/hyra)** — Rental queue management engine for the Swedish housing market. Django 4.2, DRF, PostgreSQL, Elasticsearch, Redis, Celery, webhooks with HMAC signing, atomic queue processing with row-level locking, 3 ranking algorithms, 59 tests
+
 **[django-auth-profile](https://github.com/abdulwahed-sweden/django-auth-profile)** — Production Django platform with DRF REST API, role-based access, rate limiting, Docker, CI/CD, 51 tests
 
 **[BookFlow](https://github.com/abdulwahed-sweden/BookFlow)** — FastAPI booking API with SQLAlchemy, JWT auth, conflict detection, and lifecycle management
