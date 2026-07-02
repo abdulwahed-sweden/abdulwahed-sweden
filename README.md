@@ -44,9 +44,9 @@ Live products on it → **[SystemKraft](https://github.com/abdulwahed-sweden/sys
 
 | System | What it is | The numbers that matter |
 |--------|-----------|--------------------------|
-| 🔒 **Ferox** *(framework)* | Rust-native offensive-security / red-team platform | **94K+ LOC** · **782+ tests** · **36-crate** enterprise edition · **33+** post-exploitation modules · zero `unsafe` |
+| **[Ferox](https://github.com/abdulwahed-sweden/ferox)** `v4.1` | Rust-native offensive-security / red-team platform | **94K+ LOC** · **782+ tests** · **36-crate** enterprise edition · **33+** post-exploitation modules · zero `unsafe` |
 | 🔒 **Ferox-Pro** `v2.2` | Enterprise security-assessment engine | Nuclei-compatible template engine · CVSS 3.1 / CWE / CVE · REST API for CI/CD · EVM **&** Solana contract analysis |
-| 🔒 **BTC Sentinel** `v2.0` | Multi-chain forensic intelligence — *"Chainalysis at zero cost"* | **20,000 tx/s** analysis · **50,000 addr/s** clustering · **<1 ms** wire-speed mempool intercept |
+| **[BTC Sentinel](https://github.com/abdulwahed-sweden/Bitcoin-Sentinel)** `v2.0` | Multi-chain forensic intelligence — *"Chainalysis at zero cost"* | **20,000 tx/s** analysis · **50,000 addr/s** clustering · **<1 ms** wire-speed mempool intercept |
 | 🔒 **Amend Protocol** | Multi-chain DeFi vault suite (EVM + Solana) | **1,630 tests** incl. **1,000-run fuzz** · on-chain ethics invariants (`EthicsGuard`, `FairFeeGuard`) |
 | **[HuntKey](https://github.com/abdulwahed-sweden/huntkey)** | Sovereign smart account (ERC-4337) | **126 tests** · **15 on-chain checks** · 4-layer defense · no blind signing, no long-lived keys |
 
