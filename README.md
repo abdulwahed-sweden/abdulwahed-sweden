@@ -17,6 +17,7 @@ Stockholm, Sweden · 15+ years · zero&nbsp;`unsafe` · available for Rust proje
 [![Vuln class](https://img.shields.io/badge/%2498.6M-vuln_class_found-C62828?style=for-the-badge)](#)
 
 [![Authorized security researcher](https://img.shields.io/badge/Authorized_Security_Researcher-Immunefi_·_Sherlock_·_Code4rena-1565C0?style=for-the-badge&logo=hackerone&logoColor=white)](#)
+[![Immunefi Hall of Fame](https://img.shields.io/badge/🏆_Immunefi-Hall_of_Fame-FF6B00?style=for-the-badge)](#)
 
 </div>
 
@@ -62,8 +63,8 @@ Live products on it → **[SystemKraft](https://github.com/abdulwahed-sweden/sys
 
 ## 🕸️ Web3 · Smart-Contract Security
 
-> ### ✅ Authorized Security Researcher
-> I operate **exclusively under sanctioned bug-bounty & audit programs** — with explicit authorization from the industry's leading platforms, **Immunefi · Sherlock · Code4rena** — and have **confirmed, paid findings in the production systems of major protocols**, including **Aave**, **Morpho**, **Curve**, and **ENS**. Every engagement is legal, in-scope, and permissioned.
+> ### ✅ Authorized Security Researcher · 🏆 Immunefi Hall of Fame
+> **Listed in the Immunefi Hall of Fame.** I operate **exclusively under sanctioned bug-bounty & audit programs** — with explicit authorization from the industry's leading platforms, **Immunefi · Sherlock · Code4rena** — and have **confirmed, paid findings in the production systems of major protocols**, including **Aave**, **Morpho**, **Curve**, and **ENS**. Every engagement is legal, in-scope, and permissioned.
 
 Offensive research that pays: **$140K+ in confirmed bounties** on Immunefi, Sherlock & Code4rena — and a discovered **vulnerability *class* affecting $98.6M+** (Anti-Dilution / ADS) across **Aave V4**, **Morpho Blue**, and **Curve crvUSD**.
 
