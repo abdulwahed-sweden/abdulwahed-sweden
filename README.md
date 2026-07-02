@@ -2,93 +2,99 @@
 
 # Abdulwahed Mansour
 
-**Rust Systems Engineer — I build production business systems in Rust**
+### Rust Systems Engineer · Offensive Security · On-Chain Forensics
 
-Stockholm, Sweden · available for Rust projects — Swedish market & remote (EU)
+**I build the software other engineers are afraid to write — in Rust, safe by construction.**
 
-[![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)](#)
-[![Tokio](https://img.shields.io/badge/Tokio-463f3a?style=flat-square&logo=rust&logoColor=white)](#)
-[![Axum](https://img.shields.io/badge/Axum-8A2BE2?style=flat-square&logo=rust&logoColor=white)](#)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)](#)
-[![WASM](https://img.shields.io/badge/WebAssembly-654FF0?style=flat-square&logo=webassembly&logoColor=white)](#)
-[![PyO3](https://img.shields.io/badge/PyO3-FFD43B?style=flat-square&logo=rust&logoColor=black)](#)
+Stockholm, Sweden · 15+ years · zero&nbsp;`unsafe` · available for Rust projects (Swedish market & remote EU)
+
+<br>
+
+[![Lines of Rust & code](https://img.shields.io/badge/~208K-lines_shipped-000000?style=for-the-badge&logo=rust&logoColor=white)](#)
+[![Tests](https://img.shields.io/badge/5%2C700%2B-automated_tests-2E7D32?style=for-the-badge)](#)
+[![Traced](https://img.shields.io/badge/%241.5B-traced_in_36s-B71C1C?style=for-the-badge)](#)
+[![Bounties](https://img.shields.io/badge/%24140K%2B-bounties_paid-6A1B9A?style=for-the-badge)](#)
+[![Vuln class](https://img.shields.io/badge/%2498.6M-vuln_class_found-C62828?style=for-the-badge)](#)
 
 </div>
 
 ---
 
-I build **complete, deployable business systems in Rust** — not just libraries. Memory-safe services that a company can actually run: **one binary, one PostgreSQL, a full audit trail, no build step, and no frontend pipeline to maintain.**
+I don't write toy programs. I ship **production systems in Rust** where correctness is not optional: red-team platforms, blockchain forensic engines that compete with Chainalysis, DeFi protocols guarded by formal invariants, and a full web + admin framework. Every line under a **zero-`unsafe` policy** and the strictest Clippy configuration — power *and* safety, at the same time.
 
-My goal is simple: help **Swedish companies** replace fragile multi-service web stacks and per-seat SaaS with a single, auditable Rust system they own outright. 15+ years engineering, a zero-`unsafe` policy, and a security-research background mean the attack surface is part of the design from day one.
-
----
-
-## 🦀 RustIO — my flagship
-
-A **"Django-for-Rust"** framework I authored, and the products built on it.
-
-**[rustio-admin](https://github.com/abdulwahed-sweden/rustio-admin)** — a Postgres-first administrative framework for Rust. Most admin tools treat CRUD as the product and bolt on auth later. RustIO inverts that: **authority — authentication, sessions, recovery, role-based access, and a complete audit trail — is designed as one system.** An admin surface is one derive, one impl, one register call.
-
-- TOTP MFA + single-use Argon2id backup codes · re-auth wall on every destructive action
-- Per-request `correlation_id` audit chain · 5-tier role hierarchy · account lockout + throttle
-- **Postgres only. No build step. Single-binary deployment.**
-
-**[rustio](https://github.com/abdulwahed-sweden/rustio)** — the web framework: plain Rust structs → a working admin UI, database, auth, and HTTP server, with a guided CLI that turns a one-sentence brief into a reviewed schema + migrations. Companion tooling: **[rustio-design](https://github.com/abdulwahed-sweden/rustio-design)** (declarative design system → `tokens.css`) and **[rustio-draft](https://github.com/abdulwahed-sweden/rustio-draft)** (natural-language brief → schema).
+For companies, that translates into one thing: **memory-safe business systems you can actually run** — one binary, one PostgreSQL, a complete audit trail, no build step, no per-seat SaaS bill. My goal is to bring that to the **Swedish market** through the RustIO project below.
 
 ---
 
-## 💼 What I build for Swedish companies
+## 🦀 RustIO — the framework I authored
 
-Built on rustio-admin, delivered as one memory-safe binary:
+> **"Django-for-Rust."** Plain Rust structs in → a working admin UI, database, auth, and HTTP server out. Then I ship real business systems on it.
 
-- **Business systems & internal control panels** — CRM, operations, back-office. One source of truth, audit-grade, no SaaS subscription and a radically smaller operational + attack surface.
-- **Compliance-driven systems** — e.g. a self-hosted **EU Whistleblower Directive** channel (Swedish *lag 2021:890*, mandatory at 50+ staff) where data never leaves the company's own server; GDPR-aware data architecture.
-- **Performance rescue** — embed a Rust core into an existing Python/Node service via **PyO3/FFI** to fix a hot path without a full rewrite.
-- **Security & forensic tooling** — high-throughput analysis engines and bots as single, statically-linked binaries.
+**[`rustio-admin`](https://github.com/abdulwahed-sweden/rustio-admin)** · **[`rustio`](https://github.com/abdulwahed-sweden/rustio)** · **[`rustio-draft`](https://github.com/abdulwahed-sweden/rustio-draft)** · **[`rustio-design`](https://github.com/abdulwahed-sweden/rustio-design)**
 
----
+Most admin tools treat CRUD as the product and bolt on auth later. **RustIO inverts that** — *authority* (authentication, sessions, recovery, role-based access, complete audit trail) is designed as **one system**:
 
-## 📦 Products & projects built on RustIO
+`TOTP MFA + Argon2id backup codes` · `re-auth wall on every destructive action` · `per-request correlation_id audit chain` · `5-tier RBAC` · `account lockout + throttle` · **`single-binary · no build step · no frontend pipeline`**
 
-**[SystemKraft](https://github.com/abdulwahed-sweden/systemkraft)** — business-systems engineering for Swedish enterprises. A public site *and* a live, fully-audited `/admin` CRM served from **one Rust binary** — the offering, running live.
-
-**[Lursystem](https://github.com/abdulwahed-sweden/lursystem)** *(in development)* — self-hosted EU whistleblower-reporting & case-handling for Swedish employers; data stays in-country, behind the company's own audit chain.
-
-**[clinicflow](https://github.com/abdulwahed-sweden/clinicflow)** · **[obddesk](https://github.com/abdulwahed-sweden/obddesk)** · **[shop](https://github.com/abdulwahed-sweden/shop)** — vertical demos proving the framework across clinic, diagnostics, and retail domains.
+Live products on it → **[SystemKraft](https://github.com/abdulwahed-sweden/systemkraft)** (business systems for Swedish enterprises) · **[Lursystem](https://github.com/abdulwahed-sweden/lursystem)** (EU whistleblower compliance, *lag 2021:890*) · **[clinicflow](https://github.com/abdulwahed-sweden/clinicflow)** · **[obddesk](https://github.com/abdulwahed-sweden/obddesk)** · **[shop](https://github.com/abdulwahed-sweden/shop)**
 
 ---
 
-## 🔧 Other Rust work
+## ⚔️ The Arsenal — my most powerful Rust systems
 
-**[polaris-chronos](https://github.com/abdulwahed-sweden/polaris-chronos)** — high-precision solar/prayer-time engine, polar-region capable; **Rust + WASM**, REST API, 96 tests, live on Hugging Face Spaces.
+| System | What it is | The numbers that matter |
+|--------|-----------|--------------------------|
+| 🔒 **Ferox** *(framework)* | Rust-native offensive-security / red-team platform | **94K+ LOC** · **782+ tests** · **36-crate** enterprise edition · **33+** post-exploitation modules · zero `unsafe` |
+| 🔒 **Ferox-Pro** `v2.2` | Enterprise security-assessment engine | Nuclei-compatible template engine · CVSS 3.1 / CWE / CVE · REST API for CI/CD · EVM **&** Solana contract analysis |
+| 🔒 **BTC Sentinel** `v2.0` | Multi-chain forensic intelligence — *"Chainalysis at zero cost"* | **20,000 tx/s** analysis · **50,000 addr/s** clustering · **<1 ms** wire-speed mempool intercept |
+| 🔒 **Amend Protocol** | Multi-chain DeFi vault suite (EVM + Solana) | **1,630 tests** incl. **1,000-run fuzz** · on-chain ethics invariants (`EthicsGuard`, `FairFeeGuard`) |
+| **[HuntKey](https://github.com/abdulwahed-sweden/huntkey)** | Sovereign smart account (ERC-4337) | **126 tests** · **15 on-chain checks** · 4-layer defense · no blind signing, no long-lived keys |
 
-**[huntkey](https://github.com/abdulwahed-sweden/huntkey)** — intent-based sovereign smart account (ERC-4337); Rust + Solidity, 4-layer defense, 126 tests.
+<div align="center"><sub>🔒 = private / enterprise repository — walkthrough available on request</sub></div>
 
-**[chthonic](https://github.com/abdulwahed-sweden/chthonic)** — modular, async-first penetration-testing framework in Rust.
+### 🎯 Career-defining result
 
-**[swiftline](https://github.com/abdulwahed-sweden/swiftline)** · **[axum-rust](https://github.com/abdulwahed-sweden/axum-rust)** · **[deepseek-rust](https://github.com/abdulwahed-sweden/deepseek-rust)** · **[rust-scraper-pro](https://github.com/abdulwahed-sweden/rust-scraper-pro)** — CLI, web, async-client, and scraping libraries.
+> **Traced the $1.5B Bybit / Lazarus theft — 42,479 addresses across 33 clusters — in 36 seconds**, with a single statically-linked Rust binary (zero-copy parsing, zero-allocation hot paths). Aave V3 liquidation research spanned **33,827 on-chain events**.
 
 ---
 
-## 🛡️ Security research
+## 🕸️ Web3 · Smart-Contract Security
 
-Active on **Immunefi**, **Sherlock**, and **Code4rena** with confirmed findings in production systems — **$140K+ in bounties** and a discovered vulnerability *class* affecting **$98.6M+** across major DeFi protocols. Forensics: traced a **$1.5B** on-chain theft (42,479 addresses) in 36 seconds with a Rust engine.
+Offensive research that pays: **$140K+ in confirmed bounties** on Immunefi, Sherlock & Code4rena — and a discovered **vulnerability *class* affecting $98.6M+** (Anti-Dilution / ADS) across **Aave V4**, **Morpho Blue**, and **Curve crvUSD**.
+
+| Platform | Target | Finding | Severity |
+|----------|--------|---------|----------|
+| Research | Aave V4 | ADS phantom-yield extraction (~$96M) | **Critical** |
+| Research | Morpho Blue | ADS invariant violations (~$2M) | **Critical** |
+| Research | Curve crvUSD | ADS fee asymmetry (~$585K) | **Critical** |
+| Immunefi | Moonwell / Mamo | SlippagePriceChecker boundary condition | High |
+| Immunefi | ENS | Gas griefing in `SignatureUtils.sol` | Medium |
+
+Also shipping: 🔒 **HuntLoan** — MEV flash-loan liquidation bot **deployed live on Base mainnet** (HF-velocity prediction, 3-tier × 3-regime gas strategy, circuit breaker) · 🔒 **fluid-tick-drift-guard** — oracle-manipulation defense **proven against a $50M mainnet-fork attack**.
 
 ---
 
-## 🧰 Tech
+## 🔧 Also in Rust
 
-**Rust:** Tokio · Axum · Serde · Rayon · Clap · Ratatui · PyO3 (Rust↔Python) · WASM · single-binary distribution · zero-`unsafe` · strict Clippy
-**Data:** PostgreSQL (Postgres-first) · Redis · schema/migrations · audit trails
-**Ops:** Docker · GitHub Actions CI/CD · Linux server hardening
-**Also:** Solidity/Foundry (audits) · TypeScript
+**[polaris-chronos](https://github.com/abdulwahed-sweden/polaris-chronos)** — solar/prayer-time engine, polar-region capable · **Rust + WASM** · 96 tests · live on HF Spaces
+**[chthonic](https://github.com/abdulwahed-sweden/chthonic)** — modular async-first pentest framework · **[rust-scraper-pro](https://github.com/abdulwahed-sweden/rust-scraper-pro)** · **[swiftline](https://github.com/abdulwahed-sweden/swiftline)** · **[axum-rust](https://github.com/abdulwahed-sweden/axum-rust)** · **[deepseek-rust](https://github.com/abdulwahed-sweden/deepseek-rust)**
+
+---
+
+## 🧰 Stack
+
+**Rust** Tokio · Axum · Serde · Rayon · Clap · Ratatui · **PyO3** (Rust↔Python) · **WASM** · Tauri · single-binary · zero&nbsp;`unsafe` · strict Clippy
+**Chain** Solidity 0.8.x · Foundry · Anchor/Solana · `alloy` · ERC-4626 / ERC-4337 · MEV
+**Data / Ops** PostgreSQL (Postgres-first) · Redis · Docker · GitHub Actions CI/CD · Linux hardening
 
 ---
 
 <div align="center">
 
+### Available for Rust engineering projects & consulting — Swedish market and remote across the EU.
+
 **[abdulwahed.mansour@gmail.com](mailto:abdulwahed.mansour@gmail.com)** · **[LinkedIn](https://linkedin.com/in/abdulwahed-sweden)**
 
-*Available for Rust engineering projects & consulting — Swedish market and remote across the EU.*
+<sub>Power and safety are not a trade-off. I ship both.</sub>
 
 </div>
