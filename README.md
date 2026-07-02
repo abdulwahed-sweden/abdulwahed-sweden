@@ -12,9 +12,8 @@ Stockholm, Sweden · 15+ years · zero&nbsp;`unsafe` · available for Rust proje
 
 [![Lines of Rust & code](https://img.shields.io/badge/~208K-lines_shipped-000000?style=for-the-badge&logo=rust&logoColor=white)](#)
 [![Tests](https://img.shields.io/badge/5%2C700%2B-automated_tests-2E7D32?style=for-the-badge)](#)
-[![Traced](https://img.shields.io/badge/%241.5B-traced_in_36s-B71C1C?style=for-the-badge)](#)
-[![Bounties](https://img.shields.io/badge/%24140K%2B-bounties_paid-6A1B9A?style=for-the-badge)](#)
-[![Vuln class](https://img.shields.io/badge/%2498.6M-vuln_class_found-C62828?style=for-the-badge)](#)
+[![Traced](https://img.shields.io/badge/42%2C479_addresses-traced_in_36s-B71C1C?style=for-the-badge)](#)
+[![Vuln class](https://img.shields.io/badge/critical-vuln_class_discovered-C62828?style=for-the-badge)](#)
 
 [![Authorized security researcher](https://img.shields.io/badge/Authorized_Security_Researcher-Immunefi_·_Sherlock_·_Code4rena-1565C0?style=for-the-badge&logo=hackerone&logoColor=white)](#)
 [![Immunefi Hall of Fame](https://img.shields.io/badge/🏆_Immunefi-Hall_of_Fame-FF6B00?style=for-the-badge)](#)
@@ -57,26 +56,26 @@ Live products on it → **[SystemKraft](https://github.com/abdulwahed-sweden/sys
 
 ### 🎯 Career-defining result
 
-> **Traced the $1.5B Bybit / Lazarus theft — 42,479 addresses across 33 clusters — in 36 seconds**, with a single statically-linked Rust binary (zero-copy parsing, zero-allocation hot paths). Aave V3 liquidation research spanned **33,827 on-chain events**.
+> **Traced the Bybit / Lazarus theft — 42,479 addresses across 33 clusters — in 36 seconds**, with a single statically-linked Rust binary (zero-copy parsing, zero-allocation hot paths). Aave V3 liquidation research spanned **33,827 on-chain events**.
 
 ---
 
 ## 🕸️ Web3 · Smart-Contract Security
 
 > ### ✅ Authorized Security Researcher · 🏆 Immunefi Hall of Fame
-> **Listed in the Immunefi Hall of Fame.** I operate **exclusively under sanctioned bug-bounty & audit programs** — with explicit authorization from the industry's leading platforms, **Immunefi · Sherlock · Code4rena** — and have **confirmed, paid findings in the production systems of major protocols**, including **Aave**, **Morpho**, **Curve**, and **ENS**. Every engagement is legal, in-scope, and permissioned.
+> **Listed in the Immunefi Hall of Fame.** I operate **exclusively under sanctioned bug-bounty & audit programs** — with explicit authorization from the industry's leading platforms, **Immunefi · Sherlock · Code4rena** — and have **responsibly disclosed findings in the production systems of major protocols**, including **Aave**, **Morpho**, **Curve**, and **ENS**. Every engagement is legal, in-scope, and permissioned.
 
-Offensive research that pays: **$140K+ in confirmed bounties** on Immunefi, Sherlock & Code4rena — and a discovered **vulnerability *class* affecting $98.6M+** (Anti-Dilution / ADS) across **Aave V4**, **Morpho Blue**, and **Curve crvUSD**.
+Deep offensive research: a discovered **vulnerability *class*** (Anti-Dilution / ADS) affecting multiple lending protocols — **Aave V4**, **Morpho Blue**, and **Curve crvUSD**.
 
 | Platform | Target | Finding | Severity |
 |----------|--------|---------|----------|
-| Research | Aave V4 | ADS phantom-yield extraction (~$96M) | **Critical** |
-| Research | Morpho Blue | ADS invariant violations (~$2M) | **Critical** |
-| Research | Curve crvUSD | ADS fee asymmetry (~$585K) | **Critical** |
+| Research | Aave V4 | ADS phantom-yield extraction | **Critical** |
+| Research | Morpho Blue | ADS invariant violations (3 types) | **Critical** |
+| Research | Curve crvUSD | ADS fee asymmetry | **Critical** |
 | Immunefi | Moonwell / Mamo | SlippagePriceChecker boundary condition | High |
 | Immunefi | ENS | Gas griefing in `SignatureUtils.sol` | Medium |
 
-Also shipping: 🔒 **HuntLoan** — MEV flash-loan liquidation bot **deployed live on Base mainnet** (HF-velocity prediction, 3-tier × 3-regime gas strategy, circuit breaker) · 🔒 **fluid-tick-drift-guard** — oracle-manipulation defense **proven against a $50M mainnet-fork attack**.
+Also shipping: 🔒 **HuntLoan** — MEV flash-loan liquidation bot **deployed live on Base mainnet** (HF-velocity prediction, 3-tier × 3-regime gas strategy, circuit breaker) · 🔒 **fluid-tick-drift-guard** — oracle-manipulation defense **proven against a mainnet-fork attack simulation**.
 
 ---
 
