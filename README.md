@@ -36,6 +36,8 @@ I'm not asking to be considered a Rust engineer. The workspaces are here, the cr
 
 Demonstration surfaces built on it → **[systemkraft](https://github.com/abdulwahed-sweden/systemkraft)** · **[lursystem](https://github.com/abdulwahed-sweden/lursystem)** (EU whistleblower compliance, *lag 2021:890*) · **[clinicflow](https://github.com/abdulwahed-sweden/clinicflow)**
 
+RustIO is open infrastructure. If you build on it, you can back its development → **[Sponsor RustIO](https://github.com/sponsors/abdulwahed-sweden)**.
+
 > Framework authorship is proven by the *shape* of the code — a 12-crate workspace with derive macros and a registration API. The crates are **authored / beta**, not yet published to crates.io.
 
 ---
