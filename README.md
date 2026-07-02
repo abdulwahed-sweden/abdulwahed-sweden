@@ -2,76 +2,93 @@
 
 # Abdulwahed Mansour
 
-**Senior Backend Engineer (Python / Django)**
+**Rust Systems Engineer — I build production business systems in Rust**
 
-Stockholm, Sweden
+Stockholm, Sweden · available for Rust projects — Swedish market & remote (EU)
 
-[![Python](https://img.shields.io/badge/Python-3.12+-3776AB?style=flat-square&logo=python&logoColor=white)](#)
-[![Django](https://img.shields.io/badge/Django-5.x-092E20?style=flat-square&logo=django&logoColor=white)](#)
-[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)](#)
+[![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)](#)
+[![Tokio](https://img.shields.io/badge/Tokio-463f3a?style=flat-square&logo=rust&logoColor=white)](#)
+[![Axum](https://img.shields.io/badge/Axum-8A2BE2?style=flat-square&logo=rust&logoColor=white)](#)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)](#)
-[![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)](#)
-[![AWS](https://img.shields.io/badge/AWS-FF9900?style=flat-square&logo=amazonwebservices&logoColor=white)](#)
-[![CI/CD](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)](#)
+[![WASM](https://img.shields.io/badge/WebAssembly-654FF0?style=flat-square&logo=webassembly&logoColor=white)](#)
+[![PyO3](https://img.shields.io/badge/PyO3-FFD43B?style=flat-square&logo=rust&logoColor=black)](#)
 
 </div>
 
 ---
 
-Senior Backend Engineer with 9+ years of experience building reliable, scalable systems in cloud environments. I design and ship production-ready backend services with Python, Django, and PostgreSQL — focused on correctness, concurrency control, and reliability under load.
+I build **complete, deployable business systems in Rust** — not just libraries. Memory-safe services that a company can actually run: **one binary, one PostgreSQL, a full audit trail, no build step, and no frontend pipeline to maintain.**
 
-I also bring a security-focused mindset from active vulnerability research on platforms like Immunefi and Sherlock, with confirmed high-severity findings in production systems.
-
----
-
-### Backend Engineering
-
-- Production systems with **Django**, **Django REST Framework**, and **FastAPI** — layered architectures, JWT authentication, role-based access control
-- Dual-interface backends serving both server-rendered views and REST APIs from a single codebase
-- Security hardening: HSTS, secure cookies, CSRF protection, rate limiting, reverse-proxy headers
-- Schema design, query optimisation, and migrations across **PostgreSQL**, **MySQL**, **SQLite**, and **Redis**
-
-### DevOps & Infrastructure
-
-- Cloud infrastructure across **AWS**, **GCP**, and **Azure** core services
-- **Docker** containerisation with multi-service stacks, health-check gating, and internal networking
-- **CI/CD pipelines** with **GitHub Actions** — automated linting, testing, and deployment
-- Infrastructure-as-code with **Terraform** for reproducible environments
-
-### AI Integration
-
-- LLM integration (**Claude**, **OpenAI**, **Mistral**, **Ollama**) for summarisation, NL-to-SQL, and data processing
-- **MCP servers and clients** enabling AI agents to interact with databases through standardised interfaces
-- Automated pipelines — multi-source aggregation, LLM processing, and delivery to messaging platforms
-
-### Security Research
-
-- Active researcher on **Immunefi**, **Sherlock**, and **Code4rena** with confirmed findings in production systems
-- Built penetration testing and forensic analysis tools in **Rust** and **Python**
-- Vulnerability analysis, threat modeling, and secure architecture design
+My goal is simple: help **Swedish companies** replace fragile multi-service web stacks and per-seat SaaS with a single, auditable Rust system they own outright. 15+ years engineering, a zero-`unsafe` policy, and a security-research background mean the attack surface is part of the design from day one.
 
 ---
 
-### Selected Projects
+## 🦀 RustIO — my flagship
 
-🆕 **[Hyra](https://github.com/abdulwahed-sweden/hyra)** — Rental queue management engine for the Swedish housing market. Django 4.2, DRF, PostgreSQL, Elasticsearch, Redis, Celery, webhooks with HMAC signing, atomic queue processing with row-level locking, 3 ranking algorithms, 59 tests
+A **"Django-for-Rust"** framework I authored, and the products built on it.
 
-**[django-auth-profile](https://github.com/abdulwahed-sweden/django-auth-profile)** — Production Django platform with DRF REST API, role-based access, rate limiting, Docker, CI/CD, 51 tests
+**[rustio-admin](https://github.com/abdulwahed-sweden/rustio-admin)** — a Postgres-first administrative framework for Rust. Most admin tools treat CRUD as the product and bolt on auth later. RustIO inverts that: **authority — authentication, sessions, recovery, role-based access, and a complete audit trail — is designed as one system.** An admin surface is one derive, one impl, one register call.
 
-**[BookFlow](https://github.com/abdulwahed-sweden/BookFlow)** — FastAPI booking API with SQLAlchemy, JWT auth, conflict detection, and lifecycle management
+- TOTP MFA + single-use Argon2id backup codes · re-auth wall on every destructive action
+- Per-request `correlation_id` audit chain · 5-tier role hierarchy · account lockout + throttle
+- **Postgres only. No build step. Single-binary deployment.**
 
-**[django-sweden-enterprise](https://github.com/abdulwahed-sweden/django-sweden-enterprise)** — Django backend for the Swedish market — BankID, Swish payments, VAT logic, GDPR compliance
+**[rustio](https://github.com/abdulwahed-sweden/rustio)** — the web framework: plain Rust structs → a working admin UI, database, auth, and HTTP server, with a guided CLI that turns a one-sentence brief into a reviewed schema + migrations. Companion tooling: **[rustio-design](https://github.com/abdulwahed-sweden/rustio-design)** (declarative design system → `tokens.css`) and **[rustio-draft](https://github.com/abdulwahed-sweden/rustio-draft)** (natural-language brief → schema).
 
-**[docker-mcp-postgres-read](https://github.com/abdulwahed-sweden/docker-mcp-postgres-read)** — MCP server enabling AI agents to query PostgreSQL with read-only enforcement
+---
 
-**[news_bot](https://github.com/abdulwahed-sweden/news_bot)** — Automated pipeline: multi-source scraping → DeepSeek AI summarisation → Telegram delivery
+## 💼 What I build for Swedish companies
+
+Built on rustio-admin, delivered as one memory-safe binary:
+
+- **Business systems & internal control panels** — CRM, operations, back-office. One source of truth, audit-grade, no SaaS subscription and a radically smaller operational + attack surface.
+- **Compliance-driven systems** — e.g. a self-hosted **EU Whistleblower Directive** channel (Swedish *lag 2021:890*, mandatory at 50+ staff) where data never leaves the company's own server; GDPR-aware data architecture.
+- **Performance rescue** — embed a Rust core into an existing Python/Node service via **PyO3/FFI** to fix a hot path without a full rewrite.
+- **Security & forensic tooling** — high-throughput analysis engines and bots as single, statically-linked binaries.
+
+---
+
+## 📦 Products & projects built on RustIO
+
+**[SystemKraft](https://github.com/abdulwahed-sweden/systemkraft)** — business-systems engineering for Swedish enterprises. A public site *and* a live, fully-audited `/admin` CRM served from **one Rust binary** — the offering, running live.
+
+**[Lursystem](https://github.com/abdulwahed-sweden/lursystem)** *(in development)* — self-hosted EU whistleblower-reporting & case-handling for Swedish employers; data stays in-country, behind the company's own audit chain.
+
+**[clinicflow](https://github.com/abdulwahed-sweden/clinicflow)** · **[obddesk](https://github.com/abdulwahed-sweden/obddesk)** · **[shop](https://github.com/abdulwahed-sweden/shop)** — vertical demos proving the framework across clinic, diagnostics, and retail domains.
+
+---
+
+## 🔧 Other Rust work
+
+**[polaris-chronos](https://github.com/abdulwahed-sweden/polaris-chronos)** — high-precision solar/prayer-time engine, polar-region capable; **Rust + WASM**, REST API, 96 tests, live on Hugging Face Spaces.
+
+**[huntkey](https://github.com/abdulwahed-sweden/huntkey)** — intent-based sovereign smart account (ERC-4337); Rust + Solidity, 4-layer defense, 126 tests.
+
+**[chthonic](https://github.com/abdulwahed-sweden/chthonic)** — modular, async-first penetration-testing framework in Rust.
+
+**[swiftline](https://github.com/abdulwahed-sweden/swiftline)** · **[axum-rust](https://github.com/abdulwahed-sweden/axum-rust)** · **[deepseek-rust](https://github.com/abdulwahed-sweden/deepseek-rust)** · **[rust-scraper-pro](https://github.com/abdulwahed-sweden/rust-scraper-pro)** — CLI, web, async-client, and scraping libraries.
+
+---
+
+## 🛡️ Security research
+
+Active on **Immunefi**, **Sherlock**, and **Code4rena** with confirmed findings in production systems — **$140K+ in bounties** and a discovered vulnerability *class* affecting **$98.6M+** across major DeFi protocols. Forensics: traced a **$1.5B** on-chain theft (42,479 addresses) in 36 seconds with a Rust engine.
+
+---
+
+## 🧰 Tech
+
+**Rust:** Tokio · Axum · Serde · Rayon · Clap · Ratatui · PyO3 (Rust↔Python) · WASM · single-binary distribution · zero-`unsafe` · strict Clippy
+**Data:** PostgreSQL (Postgres-first) · Redis · schema/migrations · audit trails
+**Ops:** Docker · GitHub Actions CI/CD · Linux server hardening
+**Also:** Solidity/Foundry (audits) · TypeScript
 
 ---
 
 <div align="center">
 
-**[abdulwahed.mansour@gmail.com](mailto:abdulwahed.mansour@gmail.com)** · **[LinkedIn](https://linkedin.com/in/abdulwahed-sweden)** · **[Portfolio](https://abdulwahed-mansour.dev)**
+**[abdulwahed.mansour@gmail.com](mailto:abdulwahed.mansour@gmail.com)** · **[LinkedIn](https://linkedin.com/in/abdulwahed-sweden)**
 
-*Available for backend engineering roles in Stockholm — open to remote*
+*Available for Rust engineering projects & consulting — Swedish market and remote across the EU.*
 
 </div>
