@@ -2,104 +2,107 @@
 
 # Abdulwahed Mansour
 
-### Rust Systems Engineer · Offensive Security · On-Chain Forensics
+### Rust systems & framework engineer · Offensive-security & on-chain forensics
 
-**I build the software other engineers are afraid to write — in Rust, safe by construction.**
+Stockholm, Sweden · available for Rust engineering — Swedish market & remote (EU)
 
-Stockholm, Sweden · 15+ years · zero&nbsp;`unsafe` · available for Rust projects (Swedish market & remote EU)
-
-<br>
-
-[![Lines of Rust & code](https://img.shields.io/badge/~208K-lines_shipped-000000?style=for-the-badge&logo=rust&logoColor=white)](#)
-[![Tests](https://img.shields.io/badge/5%2C700%2B-automated_tests-2E7D32?style=for-the-badge)](#)
-[![Traced](https://img.shields.io/badge/42%2C479_addresses-traced_in_36s-B71C1C?style=for-the-badge)](#)
-[![Vuln class](https://img.shields.io/badge/critical-vuln_class_discovered-C62828?style=for-the-badge)](#)
-
-[![Authorized security researcher](https://img.shields.io/badge/Authorized_Security_Researcher-Immunefi_·_Sherlock_·_Code4rena-1565C0?style=for-the-badge&logo=hackerone&logoColor=white)](#)
+[![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)](#)
+[![Multi-crate workspaces](https://img.shields.io/badge/4-multi--crate_workspaces-DEA584?style=for-the-badge)](#)
+[![zero unsafe](https://img.shields.io/badge/zero-unsafe-2E7D32?style=for-the-badge)](#)
+[![Authorized researcher](https://img.shields.io/badge/Authorized-Security_Researcher-1565C0?style=for-the-badge&logo=hackerone&logoColor=white)](#)
 [![Immunefi Hall of Fame](https://img.shields.io/badge/🏆_Immunefi-Hall_of_Fame-FF6B00?style=for-the-badge)](#)
 
 </div>
 
 ---
 
-I don't write toy programs. I ship **production systems in Rust** where correctness is not optional: red-team platforms, blockchain forensic engines that compete with Chainalysis, DeFi protocols guarded by formal invariants, and a full web + admin framework. Every line under a **zero-`unsafe` policy** and the strictest Clippy configuration — power *and* safety, at the same time.
+I build systems in Rust that are meant to **run**, not to demo — a web + admin framework, a **37-crate** security platform, a wire-speed blockchain forensic engine, a **14-crate** robotics control stack. Multi-crate workspaces, **`zero unsafe`**, strict Clippy, single-binary deployment.
 
-For companies, that translates into one thing: **memory-safe business systems you can actually run** — one binary, one PostgreSQL, a complete audit trail, no build step, no per-seat SaaS bill. My goal is to bring that to the **Swedish market** through the RustIO project below.
-
----
-
-## 🦀 RustIO — the framework I authored
-
-> **"Django-for-Rust."** Plain Rust structs in → a working admin UI, database, auth, and HTTP server out. Then I ship real business systems on it.
-
-**[`rustio-admin`](https://github.com/abdulwahed-sweden/rustio-admin)** · **[`rustio`](https://github.com/abdulwahed-sweden/rustio)** · **[`rustio-draft`](https://github.com/abdulwahed-sweden/rustio-draft)** · **[`rustio-design`](https://github.com/abdulwahed-sweden/rustio-design)**
-
-Most admin tools treat CRUD as the product and bolt on auth later. **RustIO inverts that** — *authority* (authentication, sessions, recovery, role-based access, complete audit trail) is designed as **one system**:
-
-`TOTP MFA + Argon2id backup codes` · `re-auth wall on every destructive action` · `per-request correlation_id audit chain` · `5-tier RBAC` · `account lockout + throttle` · **`single-binary · no build step · no frontend pipeline`**
-
-Live products on it → **[SystemKraft](https://github.com/abdulwahed-sweden/systemkraft)** (business systems for Swedish enterprises) · **[Lursystem](https://github.com/abdulwahed-sweden/lursystem)** (EU whistleblower compliance, *lag 2021:890*) · **[clinicflow](https://github.com/abdulwahed-sweden/clinicflow)** · **[obddesk](https://github.com/abdulwahed-sweden/obddesk)** · **[shop](https://github.com/abdulwahed-sweden/shop)**
+I'm not asking to be considered a Rust engineer. The workspaces are here, the crate boundaries are here, the tests are here. **Read the code and judge the systems.**
 
 ---
 
-## ⚔️ The Arsenal — my most powerful Rust systems
+## RustIO — a Rust web + admin framework (authored)
 
-| System | What it is | The numbers that matter |
-|--------|-----------|--------------------------|
-| **[Ferox](https://github.com/abdulwahed-sweden/ferox)** `v4.1` | Rust-native offensive-security / red-team platform | **94K+ LOC** · **782+ tests** · **36-crate** enterprise edition · **33+** post-exploitation modules · zero `unsafe` |
-| 🔒 **Ferox-Pro** `v2.2` | Enterprise security-assessment engine | Nuclei-compatible template engine · CVSS 3.1 / CWE / CVE · REST API for CI/CD · EVM **&** Solana contract analysis |
-| **[BTC Sentinel](https://github.com/abdulwahed-sweden/Bitcoin-Sentinel)** `v2.0` | Multi-chain forensic intelligence — *"Chainalysis at zero cost"* | **20,000 tx/s** analysis · **50,000 addr/s** clustering · **<1 ms** wire-speed mempool intercept |
-| 🔒 **Amend Protocol** | Multi-chain DeFi vault suite (EVM + Solana) | **1,630 tests** incl. **1,000-run fuzz** · on-chain ethics invariants (`EthicsGuard`, `FairFeeGuard`) |
-| **[HuntKey](https://github.com/abdulwahed-sweden/huntkey)** | Sovereign smart account (ERC-4337) | **126 tests** · **15 on-chain checks** · 4-layer defense · no blind signing, no long-lived keys |
+**The thesis:** most admin tools treat CRUD as the product and bolt on auth, sessions, recovery, and audit afterward. RustIO inverts that — **authority is designed as one system**: authentication, sessions, password recovery, role-based access, MFA, and a complete audit trail as a single, coherent layer. CRUD is the easy part on top. An admin surface is one derive, one impl, one register call.
 
-<div align="center"><sub>🔒 = private / enterprise repository — walkthrough available on request</sub></div>
+`TOTP MFA + Argon2id backup codes` · `re-auth wall on every destructive action` · `per-request correlation_id audit chain` · `5-tier RBAC` · **`Postgres-first · single binary · no build step · no frontend pipeline`**
 
-### 🎯 Career-defining result
+| Repo | | Verified structure |
+|------|--|--------------------|
+| **[rustio-admin](https://github.com/abdulwahed-sweden/rustio-admin)** | Postgres-first admin framework | **12-crate workspace**, 86% Rust, 152 Rust source files |
+| **[rustio](https://github.com/abdulwahed-sweden/rustio)** | Web framework (structs → admin, DB, auth, HTTP) | **6-crate workspace**, 90% Rust |
+| **[rustio-draft](https://github.com/abdulwahed-sweden/rustio-draft)** | Natural-language brief → schema | guided project genesis |
 
-> **Traced the Bybit / Lazarus theft — 42,479 addresses across 33 clusters — in 36 seconds**, with a single statically-linked Rust binary (zero-copy parsing, zero-allocation hot paths). Aave V3 liquidation research spanned **33,827 on-chain events**.
+Demonstration surfaces built on it → **[systemkraft](https://github.com/abdulwahed-sweden/systemkraft)** · **[lursystem](https://github.com/abdulwahed-sweden/lursystem)** (EU whistleblower compliance, *lag 2021:890*) · **[clinicflow](https://github.com/abdulwahed-sweden/clinicflow)**
 
----
-
-## 🕸️ Web3 · Smart-Contract Security
-
-> ### ✅ Authorized Security Researcher · 🏆 Immunefi Hall of Fame
-> **Listed in the Immunefi Hall of Fame.** I operate **exclusively under sanctioned bug-bounty & audit programs** — with explicit authorization from the industry's leading platforms, **Immunefi · Sherlock · Code4rena** — and have **responsibly disclosed findings in the production systems of major protocols**, including **Aave**, **Morpho**, **Curve**, and **ENS**. Every engagement is legal, in-scope, and permissioned.
-
-Deep offensive research: a discovered **vulnerability *class*** (Anti-Dilution / ADS) affecting multiple lending protocols — **Aave V4**, **Morpho Blue**, and **Curve crvUSD**.
-
-| Platform | Target | Finding | Severity |
-|----------|--------|---------|----------|
-| Research | Aave V4 | ADS phantom-yield extraction | **Critical** |
-| Research | Morpho Blue | ADS invariant violations (3 types) | **Critical** |
-| Research | Curve crvUSD | ADS fee asymmetry | **Critical** |
-| Immunefi | Moonwell / Mamo | SlippagePriceChecker boundary condition | High |
-| Immunefi | ENS | Gas griefing in `SignatureUtils.sol` | Medium |
-
-Also shipping: 🔒 **HuntLoan** — MEV flash-loan liquidation bot **deployed live on Base mainnet** (HF-velocity prediction, 3-tier × 3-regime gas strategy, circuit breaker) · 🔒 **fluid-tick-drift-guard** — oracle-manipulation defense **proven against a mainnet-fork attack simulation**.
+> Framework authorship is proven by the *shape* of the code — a 12-crate workspace with derive macros and a registration API. The crates are **authored / beta**, not yet published to crates.io.
 
 ---
 
-## 🔧 Also in Rust
+## Arsenal — the strongest systems
 
-**[polaris-chronos](https://github.com/abdulwahed-sweden/polaris-chronos)** — solar/prayer-time engine, polar-region capable · **Rust + WASM** · 96 tests · live on HF Spaces
-**[chthonic](https://github.com/abdulwahed-sweden/chthonic)** — modular async-first pentest framework · **[rust-scraper-pro](https://github.com/abdulwahed-sweden/rust-scraper-pro)** · **[swiftline](https://github.com/abdulwahed-sweden/swiftline)** · **[axum-rust](https://github.com/abdulwahed-sweden/axum-rust)** · **[deepseek-rust](https://github.com/abdulwahed-sweden/deepseek-rust)**
+Ranked by technical force. Structural facts (crates, files, language mix) are **verified in-repo**; test counts are **declared in each project's README**.
+
+| System | What it is | Evidence |
+|--------|-----------|----------|
+| 🔒 **Ferox-Pro** | Rust security-assessment platform (web crawler, Nuclei-compatible engine, REST API, EVM+Solana analysis) | **37-crate workspace** · 88% Rust · 351 Rust files · 622 files *(verified)* |
+| **[Ferox](https://github.com/abdulwahed-sweden/ferox)** `v4.1` | Rust-native offensive-security framework (recon, exploitation, C2, memory forensics, Tauri desktop) | 74% Rust + Tauri UI · **206 Rust files** · MIT *(public — inspect it)* |
+| **[Bitcoin-Sentinel](https://github.com/abdulwahed-sweden/Bitcoin-Sentinel)** `v2.0` | Multi-chain forensic engine — clustering, taint, mempool interception | Rust core · zero-copy / zero-alloc · **20,000 tx/s · 50,000 addr/s · <1 ms mempool** *(declared)* |
+| 🔒 **robotics-platform** | 5-DOF arm control: analytic IK, motion planning, state machine, URDF, sim↔hardware trait surface | **14-crate workspace** · 85% Rust *(verified)* |
+| **[chthonic](https://github.com/abdulwahed-sweden/chthonic)** | Async-first modular penetration-testing framework | **100% Rust** *(public)* |
+| **[huntkey](https://github.com/abdulwahed-sweden/huntkey)** | Sovereign smart account (ERC-4337): no blind signing, no long-lived keys | Rust + Solidity · 15 on-chain checks · 126 tests *(declared)* |
+| **[polaris-chronos](https://github.com/abdulwahed-sweden/polaris-chronos)** | Solar/prayer-time engine, polar-region capable | **Rust + WASM** · live on HF Spaces · 96 tests *(declared)* |
+
+<div align="center"><sub>🔒 = private / enterprise repository — technical walkthrough available on request</sub></div>
+
+Supporting Rust (public, single-purpose, clean): **[swiftline](https://github.com/abdulwahed-sweden/swiftline)** · **[rust-cli-toolkit](https://github.com/abdulwahed-sweden/rust-cli-toolkit)** · **[axum-rust](https://github.com/abdulwahed-sweden/axum-rust)** · **[deepseek-rust](https://github.com/abdulwahed-sweden/deepseek-rust)** · **[rust-scraper-pro](https://github.com/abdulwahed-sweden/rust-scraper-pro)**
 
 ---
 
-## 🧰 Stack
+## Security & Forensics
 
-**Rust** Tokio · Axum · Serde · Rayon · Clap · Ratatui · **PyO3** (Rust↔Python) · **WASM** · Tauri · single-binary · zero&nbsp;`unsafe` · strict Clippy
-**Chain** Solidity 0.8.x · Foundry · Anchor/Solana · `alloy` · ERC-4626 / ERC-4337 · MEV
+I operate **exclusively under sanctioned bug-bounty & audit programs** — with explicit authorization from the industry's leading platforms, **Immunefi · Sherlock · Code4rena** — and I am **listed in the Immunefi Hall of Fame**. Every engagement is legal, in-scope, and permissioned; findings are **responsibly disclosed** with reproducible PoCs. Offensive tools (Ferox, chthonic) are MIT-licensed for **authorized use only**.
+
+Research highlight — a discovered **vulnerability *class*** (Anti-Dilution / ADS), responsibly disclosed:
+
+| Target | Finding | Severity |
+|--------|---------|----------|
+| Aave V4 | ADS phantom-yield extraction | **Critical** |
+| Morpho Blue | ADS invariant violations (3 types) | **Critical** |
+| Curve crvUSD | ADS fee asymmetry | **Critical** |
+
+Forensic result: traced the **Bybit / Lazarus theft — 42,479 addresses across 33 clusters, 682 transactions — in 36 seconds**, from a single statically-linked Rust binary. *(On-chain forensic conclusions are investigative leads, not legal proof.)*
+
+---
+
+## Numbers
+
+**Verified in-repo (inspect the trees yourself):**
+- **4 multi-crate Rust workspaces** — Ferox-Pro (37), robotics-platform (14), rustio-admin (12), rustio (6)
+- Ferox: **206 Rust source files**, 74% Rust + Tauri UI
+- rustio-admin: **86% Rust**, 152 Rust files · chthonic / swiftline / rust-cli-toolkit / axum-rust / deepseek-rust: **100% Rust**
+
+**Declared in project READMEs (run the tests to confirm):**
+- Bitcoin-Sentinel: 20,000 tx/s analysis · 50,000 addr/s clustering · <1 ms mempool
+- Test suites: Ferox-Pro 782+ · huntkey 126 · Bitcoin-Sentinel 111 · polaris-chronos 96
+
+---
+
+## Stack
+
+**Rust** Tokio · Axum · Serde · Rayon · Clap · Ratatui · **PyO3** (Rust↔Python) · **WASM** · Tauri · derive macros · single-binary · `zero unsafe` · strict Clippy
+**Chain** Solidity 0.8.x · Foundry · Anchor/Solana · `alloy` · ERC-4626 / ERC-4337
 **Data / Ops** PostgreSQL (Postgres-first) · Redis · Docker · GitHub Actions CI/CD · Linux hardening
 
 ---
 
 <div align="center">
 
-### Available for Rust engineering projects & consulting — Swedish market and remote across the EU.
+### Available for Rust engineering — Swedish market and remote across the EU.
 
 **[abdulwahed.mansour@gmail.com](mailto:abdulwahed.mansour@gmail.com)** · **[LinkedIn](https://linkedin.com/in/abdulwahed-sweden)**
 
-<sub>Power and safety are not a trade-off. I ship both.</sub>
+<sub>This is the work. Judge the code.</sub>
 
 </div>
