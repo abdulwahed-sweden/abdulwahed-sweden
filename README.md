@@ -49,7 +49,7 @@ Ranked by technical force. Structural facts (crates, files, language mix) are **
 | 🔒 **Ferox-Pro** | Rust security-assessment platform (web crawler, Nuclei-compatible engine, REST API, EVM+Solana analysis) | **37-crate workspace** · 88% Rust · 351 Rust files · 622 files *(verified)* |
 | **[Ferox](https://github.com/abdulwahed-sweden/ferox)** `v4.1` | Rust-native offensive-security framework (recon, exploitation, C2, memory forensics, Tauri desktop) | 74% Rust + Tauri UI · **206 Rust files** · MIT *(public — inspect it)* |
 | **[Bitcoin-Sentinel](https://github.com/abdulwahed-sweden/Bitcoin-Sentinel)** `v2.0` | Multi-chain forensic engine — clustering, taint, mempool interception | Rust core · zero-copy / zero-alloc · **20,000 tx/s · 50,000 addr/s · <1 ms mempool** *(declared)* |
-| 🔒 **robotics-platform** | 5-DOF arm control: analytic IK, motion planning, state machine, URDF, sim↔hardware trait surface | **14-crate workspace** · 85% Rust *(verified)* |
+| **[robotics-platform](https://github.com/abdulwahed-sweden/robotics-platform)** | 5-DOF arm control: analytic IK, motion planning, state machine, URDF, sim↔hardware trait surface | **14-crate workspace** · 85% Rust *(public)* |
 | **[chthonic](https://github.com/abdulwahed-sweden/chthonic)** | Async-first modular penetration-testing framework | **100% Rust** *(public)* |
 | **[huntkey](https://github.com/abdulwahed-sweden/huntkey)** | Sovereign smart account (ERC-4337): no blind signing, no long-lived keys | Rust + Solidity · 15 on-chain checks · 126 tests *(declared)* |
 | **[polaris-chronos](https://github.com/abdulwahed-sweden/polaris-chronos)** | Solar/prayer-time engine, polar-region capable | **Rust + WASM** · live on HF Spaces · 96 tests *(declared)* |
