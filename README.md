@@ -103,7 +103,7 @@ Forensic result: traced the **Bybit / Lazarus theft — 42,479 addresses across 
 
 ### Available for Rust engineering — Swedish market and remote across the EU.
 
-**[abdulwahed.mansour@gmail.com](mailto:abdulwahed.mansour@gmail.com)** · **[LinkedIn](https://linkedin.com/in/abdulwahed-sweden)**
+**[abdulwahed.mansour@gmail.com](mailto:abdulwahed.mansour@gmail.com)** · **[LinkedIn](https://linkedin.com/in/abdulwahed-sweden)** · **[Sponsor RustIO](https://github.com/sponsors/abdulwahed-sweden)**
 
 <sub>This is the work. Judge the code.</sub>
 
