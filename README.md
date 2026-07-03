@@ -38,7 +38,7 @@ Demonstration surfaces built on it → **[systemkraft](https://github.com/abdulw
 
 RustIO is open infrastructure. If you build on it, you can back its development → **[Sponsor RustIO](https://github.com/sponsors/abdulwahed-sweden)**.
 
-> Framework authorship is proven by the *shape* of the code — a 12-crate workspace with derive macros and a registration API. **Published on [crates.io](https://crates.io/crates/rustio-admin)** — `rustio-admin` 0.30.0 (`install: cargo install rustio-admin-cli`).
+> Framework authorship is proven by the *shape* of the code — a 12-crate workspace with derive macros and a registration API. **Published on [crates.io](https://crates.io/crates/rustio-admin)** — `rustio-admin` 0.31.0 (`install: cargo install rustio-admin-cli`). 🌐 **Live: [rustio.vercel.app](https://rustio.vercel.app)**
 
 ---
 
