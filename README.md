@@ -22,6 +22,21 @@ I'm not asking to be considered a Rust engineer. The workspaces are here, the cr
 
 ---
 
+## Production integrity — five failures, reproduced and repaired
+
+Each one is synthetic, self-contained, and runs in seconds. Each ships the repair and a test suite
+that fails without it.
+
+| Problem | What it proves | Repo | Run |
+|---|---|---|---|
+| A user blocked from a table reads it anyway, through search, autocomplete, and the names shown in a list they may open. | The permission check is correct — the second paths to the same table never ask it. | [permission-leak-demo](https://github.com/abdulwahed-sweden/permission-leak-demo) | `python3 demo.py` |
+| A posted amount is corrected in place, the original is gone, and the audit log is writable by the role it watches. | Two Postgres grants make the rewrite impossible — and connecting as the table owner undoes all of it. | [append-only-demo](https://github.com/abdulwahed-sweden/append-only-demo) | `./demo.sh` |
+| Two clicks a few hundred milliseconds apart refund the same order twice. | A check-then-write guard passes every sequential test and both writes land under overlap. | [double-write-demo](https://github.com/abdulwahed-sweden/double-write-demo) | `./demo.sh` |
+| A rate change moves last year's totals, and the obvious backfill stamps today's rate onto old records. | Both migrations succeed; only a check that reproduces what was charged tells them apart. | [broken-backfill-demo](https://github.com/abdulwahed-sweden/broken-backfill-demo) | `./demo.sh` |
+| Two people amend one record at the same moment and it ends up with two current versions. | Four constraints anchored at the root make a fork impossible to write, with no UPDATE required. | [forked-history-demo](https://github.com/abdulwahed-sweden/forked-history-demo) | `./demo.sh` |
+
+---
+
 ## RustIO — a Rust web + admin framework (authored)
 
 **The thesis:** most admin tools treat CRUD as the product and bolt on auth, sessions, recovery, and audit afterward. RustIO inverts that — **authority is designed as one system**: authentication, sessions, password recovery, role-based access, MFA, and a complete audit trail as a single, coherent layer. CRUD is the easy part on top. An admin surface is one derive, one impl, one register call.
