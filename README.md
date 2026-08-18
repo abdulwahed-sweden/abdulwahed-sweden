@@ -2,9 +2,9 @@
 
 # Abdulwahed Mansour
 
-### Rust systems & framework engineer · Offensive-security & on-chain forensics
+### I repair backend systems where data, permissions, history, or state can no longer be trusted.
 
-Stockholm, Sweden · available for Rust engineering — Swedish market & remote (EU)
+Stockholm, Sweden · remote across the EU · Rust · Python · PostgreSQL
 
 [![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)](#)
 [![Multi-crate workspaces](https://img.shields.io/badge/4-multi--crate_workspaces-DEA584?style=for-the-badge)](#)
@@ -116,7 +116,7 @@ Forensic result: traced the **Bybit / Lazarus theft — 42,479 addresses across 
 
 <div align="center">
 
-### Available for Rust engineering — Swedish market and remote across the EU.
+### I repair backend systems where data, permissions, history, or state can no longer be trusted.
 
 **[abdulwahed.sweden@gmail.com](mailto:abdulwahed.sweden@gmail.com)** · **[LinkedIn](https://linkedin.com/in/abdulwahed-sweden)** · **[Sponsor RustIO](https://github.com/sponsors/abdulwahed-sweden)**
 
