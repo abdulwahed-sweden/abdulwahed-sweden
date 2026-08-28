@@ -15,7 +15,7 @@ Stockholm, Sweden · Rust · Python · PostgreSQL · Security · Data Integrity
 
 I build backend and systems software where **performance, permissions, history, and data integrity** matter.
 
-Most of my public work is in **Rust, Python, and PostgreSQL** — from Django acceleration and admin frameworks to security tooling, blockchain forensics, and robotics.
+Most of my public work is in **Rust, Python, and PostgreSQL** — from admin frameworks and Django acceleration to security tooling, blockchain forensics, and robotics.
 
 If something here saves you time, becomes part of your stack, or helps you solve a difficult problem, sponsorship is the simplest way to help me keep improving it.
 
@@ -29,9 +29,9 @@ If something here saves you time, becomes part of your stack, or helps you solve
 
 | Project | What it does |
 |---|---|
-| **[ClaraX](https://github.com/abdulwahed-sweden/clarax)** | Rust-accelerated serialization and validation for Django/DRF and Python workloads. |
 | **[RustIO Admin](https://github.com/abdulwahed-sweden/rustio-admin)** | Postgres-first Rust admin framework with authentication, RBAC, recovery, and audit built into the foundation. |
 | **[RustIO](https://github.com/abdulwahed-sweden/rustio)** | Build web/admin systems from Rust structs with a typed schema and guided evolution workflow. |
+| **[ClaraX](https://github.com/abdulwahed-sweden/clarax)** | Rust-accelerated serialization and validation for Django/DRF and Python workloads. |
 | **[Bitcoin Sentinel](https://github.com/abdulwahed-sweden/Bitcoin-Sentinel)** | Rust-based defensive blockchain forensics and transaction-analysis tooling. |
 | **[robotics-platform](https://github.com/abdulwahed-sweden/robotics-platform)** | Rust robotic-arm control stack that runs the same logic in simulation and on Raspberry Pi hardware. |
 | **[Chthonic](https://github.com/abdulwahed-sweden/chthonic)** | Modular Rust framework for authorized security testing and research. |
@@ -50,11 +50,11 @@ Sponsorship funds concrete engineering work:
 - security hardening
 - new features that make the projects useful in real systems
 
-I would rather spend sponsorship money on **shipping and maintaining useful software** than on adding decorative features or vanity metrics.
+I would rather spend sponsorship money on **shipping and maintaining useful software** than on decorative features or vanity metrics.
 
 ### Using one of these projects at work?
 
-If you or your company benefits from ClaraX, RustIO, or another project here, company sponsorship is especially valuable. It helps turn spare-time maintenance into predictable engineering time and gives me a clear signal about which projects deserve deeper investment.
+If you or your company benefits from RustIO, RustIO Admin, ClaraX, or another project here, company sponsorship is especially valuable. It helps turn spare-time maintenance into predictable engineering time and gives me a clear signal about which projects deserve deeper investment.
 
 <p align="center">
   <a href="https://github.com/sponsors/abdulwahed-sweden?metadata_source=profile&metadata_campaign=company_support"><strong>🏢 Sponsor as a company</strong></a>
