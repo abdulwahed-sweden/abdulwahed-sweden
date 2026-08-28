@@ -6,7 +6,7 @@
 
 Stockholm, Sweden · Rust · Python · PostgreSQL · Security · Data Integrity
 
-[![Sponsor](https://img.shields.io/badge/Sponsor_open--source_work-%E2%9D%A4-db61a2?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/abdulwahed-sweden?metadata_source=profile&metadata_campaign=oss_profile)
+[![Sponsor](https://img.shields.io/badge/Sponsor_open--source_work-%E2%9D%A4-db61a2?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/abdulwahed-sweden?metadata_source=github_profile&metadata_campaign=top)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Abdulwahed_Mansour-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/abdulwahed-sweden)
 
 </div>
@@ -20,7 +20,7 @@ Most of my public work is in **Rust, Python, and PostgreSQL** — from admin fra
 If something here saves you time, becomes part of your stack, or helps you solve a difficult problem, sponsorship is the simplest way to help me keep improving it.
 
 <p align="center">
-  <a href="https://github.com/sponsors/abdulwahed-sweden?metadata_source=profile&metadata_campaign=oss_profile"><strong>❤️ Sponsor my open-source work</strong></a>
+  <a href="https://github.com/sponsors/abdulwahed-sweden?metadata_source=github_profile&metadata_campaign=top"><strong>❤️ Sponsor my open-source work</strong></a>
 </p>
 
 ---
@@ -57,7 +57,7 @@ I would rather spend sponsorship money on **shipping and maintaining useful soft
 If you or your company benefits from RustIO, RustIO Admin, ClaraX, or another project here, company sponsorship is especially valuable. It helps turn spare-time maintenance into predictable engineering time and gives me a clear signal about which projects deserve deeper investment.
 
 <p align="center">
-  <a href="https://github.com/sponsors/abdulwahed-sweden?metadata_source=profile&metadata_campaign=company_support"><strong>🏢 Sponsor as a company</strong></a>
+  <a href="https://github.com/sponsors/abdulwahed-sweden?metadata_source=github_profile&metadata_campaign=company"><strong>🏢 Sponsor as a company</strong></a>
 </p>
 
 ---
@@ -97,7 +97,7 @@ These are intentionally small projects showing failure → repair → regression
 You do not need to use every project to sponsor the work. If one library saved you an hour, one example helped you debug a system, or you simply want more serious open-source engineering to exist, that is enough.
 
 <p align="center">
-  <a href="https://github.com/sponsors/abdulwahed-sweden?metadata_source=profile&metadata_campaign=bottom_cta">
+  <a href="https://github.com/sponsors/abdulwahed-sweden?metadata_source=github_profile&metadata_campaign=support_section">
     <img src="https://img.shields.io/badge/Become_a_GitHub_Sponsor-%E2%9D%A4-db61a2?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="Become a GitHub Sponsor">
   </a>
 </p>
@@ -108,6 +108,6 @@ Even a small sponsorship tells me **which work people want maintained and pushed
 
 <div align="center">
 
-**[Email](mailto:abdulwahed.sweden@gmail.com)** · **[LinkedIn](https://linkedin.com/in/abdulwahed-sweden)** · **[GitHub Sponsors](https://github.com/sponsors/abdulwahed-sweden?metadata_source=profile&metadata_campaign=footer)**
+**[Email](mailto:abdulwahed.sweden@gmail.com)** · **[LinkedIn](https://linkedin.com/in/abdulwahed-sweden)** · **[GitHub Sponsors](https://github.com/sponsors/abdulwahed-sweden?metadata_source=github_profile&metadata_campaign=footer)**
 
 </div>
