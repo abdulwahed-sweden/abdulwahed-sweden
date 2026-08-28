@@ -6,7 +6,7 @@
 
 Stockholm, Sweden · Rust · Python · PostgreSQL · Security · Data Integrity
 
-[![Sponsor](https://img.shields.io/badge/Sponsor_open--source_work-%E2%9D%A4-db61a2?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/abdulwahed-sweden)
+[![Sponsor](https://img.shields.io/badge/Sponsor_open--source_work-%E2%9D%A4-db61a2?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/abdulwahed-sweden?metadata_source=profile&metadata_campaign=oss_profile)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Abdulwahed_Mansour-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/abdulwahed-sweden)
 
 </div>
@@ -17,13 +17,11 @@ I build backend and systems software where **performance, permissions, history, 
 
 Most of my public work is in **Rust, Python, and PostgreSQL** — from Django acceleration and admin frameworks to security tooling, blockchain forensics, and robotics.
 
-If a project here saves you time, teaches you something, or becomes useful in your own work, you can help me keep building it.
+If something here saves you time, becomes part of your stack, or helps you solve a difficult problem, sponsorship is the simplest way to help me keep improving it.
 
 <p align="center">
-  <a href="https://github.com/sponsors/abdulwahed-sweden"><strong>❤️ Sponsor my open-source work</strong></a>
+  <a href="https://github.com/sponsors/abdulwahed-sweden?metadata_source=profile&metadata_campaign=oss_profile"><strong>❤️ Sponsor my open-source work</strong></a>
 </p>
-
-Sponsorship helps fund **maintenance, releases, testing, benchmarks, documentation, and new features** across the projects below.
 
 ---
 
@@ -37,6 +35,30 @@ Sponsorship helps fund **maintenance, releases, testing, benchmarks, documentati
 | **[Bitcoin Sentinel](https://github.com/abdulwahed-sweden/Bitcoin-Sentinel)** | Rust-based defensive blockchain forensics and transaction-analysis tooling. |
 | **[robotics-platform](https://github.com/abdulwahed-sweden/robotics-platform)** | Rust robotic-arm control stack that runs the same logic in simulation and on Raspberry Pi hardware. |
 | **[Chthonic](https://github.com/abdulwahed-sweden/chthonic)** | Modular Rust framework for authorized security testing and research. |
+
+---
+
+## What sponsorship pays for
+
+Sponsorship funds concrete engineering work:
+
+- compatibility fixes and maintenance
+- releases and packaging
+- benchmarks and performance work
+- regression tests and reliability improvements
+- documentation and examples
+- security hardening
+- new features that make the projects useful in real systems
+
+I would rather spend sponsorship money on **shipping and maintaining useful software** than on adding decorative features or vanity metrics.
+
+### Using one of these projects at work?
+
+If you or your company benefits from ClaraX, RustIO, or another project here, company sponsorship is especially valuable. It helps turn spare-time maintenance into predictable engineering time and gives me a clear signal about which projects deserve deeper investment.
+
+<p align="center">
+  <a href="https://github.com/sponsors/abdulwahed-sweden?metadata_source=profile&metadata_campaign=company_support"><strong>🏢 Sponsor as a company</strong></a>
+</p>
 
 ---
 
@@ -72,22 +94,20 @@ These are intentionally small projects showing failure → repair → regression
 
 ## Support the work
 
-Everything above represents ongoing engineering time: fixing bugs, maintaining releases, improving documentation, running benchmarks, adding tests, and building the next useful piece.
-
-If you want to help keep that work moving:
+You do not need to use every project to sponsor the work. If one library saved you an hour, one example helped you debug a system, or you simply want more serious open-source engineering to exist, that is enough.
 
 <p align="center">
-  <a href="https://github.com/sponsors/abdulwahed-sweden">
+  <a href="https://github.com/sponsors/abdulwahed-sweden?metadata_source=profile&metadata_campaign=bottom_cta">
     <img src="https://img.shields.io/badge/Become_a_GitHub_Sponsor-%E2%9D%A4-db61a2?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="Become a GitHub Sponsor">
   </a>
 </p>
 
-Even a small sponsorship tells me **which projects people want maintained and pushed further**.
+Even a small sponsorship tells me **which work people want maintained and pushed further**.
 
 ---
 
 <div align="center">
 
-**[Email](mailto:abdulwahed.sweden@gmail.com)** · **[LinkedIn](https://linkedin.com/in/abdulwahed-sweden)** · **[GitHub Sponsors](https://github.com/sponsors/abdulwahed-sweden)**
+**[Email](mailto:abdulwahed.sweden@gmail.com)** · **[LinkedIn](https://linkedin.com/in/abdulwahed-sweden)** · **[GitHub Sponsors](https://github.com/sponsors/abdulwahed-sweden?metadata_source=profile&metadata_campaign=footer)**
 
 </div>
