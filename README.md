@@ -11,6 +11,7 @@ Stockholm, Sweden · remote across the EU · Rust · Python · PostgreSQL
 [![zero unsafe](https://img.shields.io/badge/zero-unsafe-2E7D32?style=for-the-badge)](#)
 [![Authorized researcher](https://img.shields.io/badge/Authorized-Security_Researcher-1565C0?style=for-the-badge&logo=hackerone&logoColor=white)](#)
 [![Immunefi Hall of Fame](https://img.shields.io/badge/🏆_Immunefi-Hall_of_Fame-FF6B00?style=for-the-badge)](#)
+[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-db61a2?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/abdulwahed-sweden)
 
 </div>
 
@@ -118,7 +119,7 @@ Forensic result: traced the **Bybit / Lazarus theft — 42,479 addresses across 
 
 ### I repair backend systems where data, permissions, history, or state can no longer be trusted.
 
-**[abdulwahed.sweden@gmail.com](mailto:abdulwahed.sweden@gmail.com)** · **[LinkedIn](https://linkedin.com/in/abdulwahed-sweden)** · **[Sponsor RustIO](https://github.com/sponsors/abdulwahed-sweden)**
+**[abdulwahed.sweden@gmail.com](mailto:abdulwahed.sweden@gmail.com)** · **[LinkedIn](https://linkedin.com/in/abdulwahed-sweden)** · **[Sponsor my open-source work](https://github.com/sponsors/abdulwahed-sweden)**
 
 <sub>This is the work. Judge the code.</sub>
 
