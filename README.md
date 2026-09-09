@@ -146,3 +146,5 @@ users.
 · Linux · GitHub Actions · Python · SQL**
 
 📍 Stockholm, Sweden · ✉️ abdulwahed.mansour@gmail.com
+
+[❤️ Sponsor this work](https://github.com/sponsors/abdulwahed-sweden?metadata_source=github_profile&metadata_campaign=top)
