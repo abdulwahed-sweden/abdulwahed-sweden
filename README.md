@@ -1,113 +1,148 @@
-<div align="center">
+## Abdulwahed Mansour
 
-# Abdulwahed Mansour
+### Rust Software & Systems Engineer
 
-### Backend & systems engineer building fast, reliable open-source software.
+I build software systems in Rust — applications, backend services, storage engines,
+infrastructure and developer tools, usually as multi-crate workspaces over PostgreSQL.
 
-Stockholm, Sweden · Rust · Python · PostgreSQL · Security · Data Integrity
-
-[![Sponsor](https://img.shields.io/badge/Sponsor_open--source_work-%E2%9D%A4-db61a2?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/abdulwahed-sweden?metadata_source=github_profile&metadata_campaign=top)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Abdulwahed_Mansour-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/abdulwahed-sweden)
-
-</div>
+The through-line in my work is that guarantees are enforced rather than intended:
+architecture rules that fail CI, database grants that make an invalid write
+impossible, and tests that try to break a claim instead of confirming it.
 
 ---
 
-I build backend and systems software where **performance, permissions, history, and data integrity** matter.
+### What I work on
 
-Most of my public work is in **Rust, Python, and PostgreSQL** — from admin frameworks and Django acceleration to security tooling, blockchain forensics, and robotics.
-
-If something here saves you time, becomes part of your stack, or helps you solve a difficult problem, sponsorship is the simplest way to help me keep improving it.
-
-<p align="center">
-  <a href="https://github.com/sponsors/abdulwahed-sweden?metadata_source=github_profile&metadata_campaign=top"><strong>❤️ Sponsor my open-source work</strong></a>
-</p>
-
----
-
-## Featured projects
-
-| Project | What it does |
+| | |
 |---|---|
-| **[RustIO Admin](https://github.com/abdulwahed-sweden/rustio-admin)** | Postgres-first Rust admin framework with authentication, RBAC, recovery, and audit built into the foundation. |
-| **[RustIO](https://github.com/abdulwahed-sweden/rustio)** | Build web/admin systems from Rust structs with a typed schema and guided evolution workflow. |
-| **[ClaraX](https://github.com/abdulwahed-sweden/clarax)** | Rust-accelerated serialization and validation for Django/DRF and Python workloads. |
-| **[Bitcoin Sentinel](https://github.com/abdulwahed-sweden/Bitcoin-Sentinel)** | Rust-based defensive blockchain forensics and transaction-analysis tooling. |
-| **[robotics-platform](https://github.com/abdulwahed-sweden/robotics-platform)** | Rust robotic-arm control stack that runs the same logic in simulation and on Raspberry Pi hardware. |
-| **[Chthonic](https://github.com/abdulwahed-sweden/chthonic)** | Modular Rust framework for authorized security testing and research. |
+| **Applications and backend services** | Multi-crate Rust workspaces over PostgreSQL — HTTP services, CLIs, schema design and migrations, RBAC, sessions, MFA, audit trails, JSON APIs and OpenAPI |
+| **Systems software** | Storage-engine internals — segmented logs, frame codecs, crash recovery, single-writer locking — plus `no_std` crates, allocation control, bit-level wire formats and eBPF/XDP |
+| **Developer tools** | Procedural macros, code generation with an overwrite contract, CLI scaffolding and migrations, golden-file testing |
+| **Infrastructure software** | GitHub Actions as enforcement: MSRV matrices, `no_std` lanes, supply-chain gating, build-output assertions, repository-wide doctrine checks |
+| **Storage and data systems** | Append-only and tamper-evident storage, canonical encoding, explicit durability control, database-enforced integrity |
+
+Correctness, reliability, performance and security describe *how* I build, not what I
+sell: property-based testing, fuzzing, differential testing against reference
+implementations, conformance vectors, crash testing under `SIGKILL`, and written
+records of what a system does not guarantee.
 
 ---
 
-## What sponsorship pays for
+### Start here
 
-Sponsorship funds concrete engineering work:
+**[rustio-admin](https://github.com/abdulwahed-sweden/rustio-admin)** — admin-panel
+engine · *Rust · procedural macros · Axum · PostgreSQL*
+[![crates.io](https://img.shields.io/crates/v/rustio-admin.svg)](https://crates.io/crates/rustio-admin)
 
-- compatibility fixes and maintenance
-- releases and packaging
-- benchmarks and performance work
-- regression tests and reliability improvements
-- documentation and examples
-- security hardening
-- new features that make the projects useful in real systems
+Annotated Rust types in, a complete admin application out — list views, filters, bulk
+actions, CSV import/export, relations, a JSON API, OpenAPI and SDK generation — plus a
+CLI that scaffolds and migrates projects. Published on crates.io at 0.33.0, with
+tags back to v0.4.0. 67 281 lines, 921 test attributes, five workspace crates.
 
-I would rather spend sponsorship money on **shipping and maintaining useful software** than on decorative features or vanity metrics.
-
-### Using one of these projects at work?
-
-If you or your company benefits from RustIO, RustIO Admin, ClaraX, or another project here, company sponsorship is especially valuable. It helps turn spare-time maintenance into predictable engineering time and gives me a clear signal about which projects deserve deeper investment.
-
-<p align="center">
-  <a href="https://github.com/sponsors/abdulwahed-sweden?metadata_source=github_profile&metadata_campaign=company"><strong>🏢 Sponsor as a company</strong></a>
-</p>
+Two parts worth opening the code for: generated files are content-addressed over a
+canonical projection of their specification, so the tool can tell *"you edited this"*
+from *"the spec changed"* and refuse an unsafe overwrite; and authentication is
+written directly — Argon2, TOTP enrolment with a backup-code lifecycle and AES-256-GCM
+secret storage, session tokens hashed at rest with every revocation funnelled through
+one path, tested against ephemeral PostgreSQL via testcontainers.
 
 ---
 
-## What I care about
+**Failure-class demonstrations** — one integrity failure each, in the smallest system
+that exhibits it
 
-I like problems that are easy to describe but expensive to get wrong:
+Each ships the same test suite **twice** — once against the repair and once against
+the unrepaired code, with the expected pass and failure counts written in the README.
+The failure is asserted, not only the fix, so a silently restored guard cannot produce
+a green run. Each runs in about a second and each README opens by saying the system is
+synthetic.
 
-- duplicate or unsafe writes
-- authorization leaks
-- race conditions and retries
-- broken historical data
-- mutable audit trails
-- database/application permission mismatches
-- performance bottlenecks where Python needs a faster path
+- **[append-only-demo](https://github.com/abdulwahed-sweden/append-only-demo)** — an
+  audit log the application can rewrite, versus a schema where the application role
+  holds no `UPDATE` or `DELETE` grant. The broken half is granted everything
+  deliberately, because that is the normal setup rather than a strawman.
+- **[double-write-demo](https://github.com/abdulwahed-sweden/double-write-demo)** — a
+  check-then-write refund guard that passes every sequential test and double-refunds
+  under overlapping requests.
+- **[forked-history-demo](https://github.com/abdulwahed-sweden/forked-history-demo)** —
+  two concurrent amendments producing two equally current versions of one record.
+- **[broken-backfill-demo](https://github.com/abdulwahed-sweden/broken-backfill-demo)** —
+  a lookup-table change that silently restates last year's invoices, and a backfill
+  that reconstructs the historically correct value rather than today's.
+- **[permission-leak-demo](https://github.com/abdulwahed-sweden/permission-leak-demo)** —
+  a correct per-page permission check that still leaks a blocked table through search,
+  autocomplete and names rendered inside an allowed list. The fix moves the check from
+  endpoint to reachable data.
 
-I usually work by **reproducing the failure, fixing the boundary, and leaving a regression test behind**.
-
----
-
-## Small reproducible integrity demos
-
-These are intentionally small projects showing failure → repair → regression test:
-
-**[Permission leak](https://github.com/abdulwahed-sweden/permission-leak-demo)** · **[Append-only history](https://github.com/abdulwahed-sweden/append-only-demo)** · **[Double write](https://github.com/abdulwahed-sweden/double-write-demo)** · **[Broken backfill](https://github.com/abdulwahed-sweden/broken-backfill-demo)** · **[Forked history](https://github.com/abdulwahed-sweden/forked-history-demo)**
-
----
-
-## More open-source work
-
-**[HuntKey](https://github.com/abdulwahed-sweden/huntkey)** · **[Polaris Chronos](https://github.com/abdulwahed-sweden/polaris-chronos)** · **[Swiftline](https://github.com/abdulwahed-sweden/swiftline)** · **[Rust CLI Toolkit](https://github.com/abdulwahed-sweden/rust-cli-toolkit)** · **[Axum Rust](https://github.com/abdulwahed-sweden/axum-rust)** · **[Rust Scraper Pro](https://github.com/abdulwahed-sweden/rust-scraper-pro)**
-
----
-
-## Support the work
-
-You do not need to use every project to sponsor the work. If one library saved you an hour, one example helped you debug a system, or you simply want more serious open-source engineering to exist, that is enough.
-
-<p align="center">
-  <a href="https://github.com/sponsors/abdulwahed-sweden?metadata_source=github_profile&metadata_campaign=support_section">
-    <img src="https://img.shields.io/badge/Become_a_GitHub_Sponsor-%E2%9D%A4-db61a2?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="Become a GitHub Sponsor">
-  </a>
-</p>
-
-Even a small sponsorship tells me **which work people want maintained and pushed further**.
+*(A sixth demonstration covers SSRF via DNS rebinding as a TOCTOU, with the resolver
+and network simulated so the race is deterministic while the guard under test stays
+real. It is local only and has no public repository.)*
 
 ---
 
-<div align="center">
+**[polaris-chronos](https://github.com/abdulwahed-sweden/polaris-chronos)** — solar
+position from first principles
 
-**[Email](mailto:abdulwahed.sweden@gmail.com)** · **[LinkedIn](https://linkedin.com/in/abdulwahed-sweden)** · **[GitHub Sponsors](https://github.com/sponsors/abdulwahed-sweden?metadata_source=github_profile&metadata_campaign=footer)**
+Julian date, declination, equation of time, altitude and azimuth with an explicit
+refraction constant, plus Hijri and lunar calendars and a location resolver with
+caching. 108 test attributes over 5 618 lines. Ships as a CLI, an Axum service and a
+Docker image.
 
-</div>
+---
+
+**[rustio](https://github.com/abdulwahed-sweden/rustio)** — the predecessor of
+rustio-admin
+
+A Django-shaped web framework in Rust on SQLite: 49 216 lines, 696 test attributes,
+with two full example applications generated in-tree. Superseded by rustio-admin,
+which moved the same idea to PostgreSQL.
+
+---
+
+### Private work
+
+Some of the work that best represents what I build is in private repositories. It is
+described here and not linked.
+
+**Authenticated record systems in Rust** — one line of work across three generations.
+Append-only record systems whose tamper-evidence can be verified offline by a party
+holding no key, built end to end: canonical wire format, cryptographic core, on-disk
+storage engine, runtime and operator tooling.
+
+The storage engine was written rather than chosen — a segmented on-disk log carrying
+two independent hash chains, and a recovery routine that distinguishes a truncated
+tail from a forged length field. SHA-256 and HMAC are implemented from FIPS 180-4 and
+RFC 2104 and differentially tested against RustCrypto at the exact padding-block
+boundaries. Authenticated encryption is applied to record bodies with the frame header
+bound as associated data, so an auditor without the key can still verify the whole
+chain. Six crates build `no_std` under a dedicated CI lane; architecture layering and
+a cryptography allow-list are enforced as tests. Verification includes 622 lines of
+property tests, 14 fuzz targets, a writer `SIGKILL`ed at seeded delays and then
+reopened and audited, and two branches of one key produced by copying a persisted
+directory and refused in both directions and through a relay.
+
+**aero-mesh** — an XDP/eBPF packet filter written in Rust on `aya`, a `no_std`
+bit-packed wire format with a CRC-4 integrity nibble and a 42-byte ceiling, and
+Bellman-Ford negative-cycle detection.
+
+Happy to walk through either privately.
+
+---
+
+### Also
+
+Earlier work was Python and Django backends, and I still read and write Python, SQL,
+C++ and Solidity where a target requires it. I do independent vulnerability research
+on the side, written as runnable proofs inside a target's own test harness rather than
+as descriptions.
+
+**Status, stated plainly:** this work is verified rather than operated. It is held to
+its stated properties by tests and CI; it has not been run in production for real
+users.
+
+---
+
+**Rust · PostgreSQL · Tokio · Axum · sqlx · `no_std` · proptest · cargo-fuzz · Docker
+· Linux · GitHub Actions · Python · SQL**
+
+📍 Stockholm, Sweden · ✉️ abdulwahed.mansour@gmail.com
