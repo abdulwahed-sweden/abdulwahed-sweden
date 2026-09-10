@@ -9,6 +9,10 @@ building, backend development and infrastructure. I have founded and run Swedish
 companies, delivered 60+ client web projects, managed an e-learning product company and
 led Development & IT inside a Swedish multi-branch business.
 
+My technical path moved from web platforms and PHP into Python/Django backend
+systems and cloud/infrastructure work. I started working with Rust in 2024; it is
+now my primary engineering language.
+
 ---
 
 ### Start here
